@@ -1,0 +1,9 @@
+.counter {
+  display: flex;
+  align-items: center;
+}
+
+.counter > *:not(:last-child) {
+  margin-right: 5px;
+}
+

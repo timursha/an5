@@ -1,0 +1,190 @@
+<div class="main">
+  <div class="container">
+    <div class="control-buttons">
+      <button mat-flat-button>left</button>
+      <button mat-flat-button>right</button>
+
+    </div>
+    <div class="route">1) 1 км 150 руб</div>
+    <div class="list">
+
+
+      <div class="item" *ngFor="let item of items">
+        <div class="title">{{item.title}}</div>
+        <div class="counter-wrap">
+          <app-counter></app-counter>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="map">
+
+    </div>
+
+    <div class="confirm">
+      <button mat-flat-button>confirm</button>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--<div class="container">
+  <!--<div class="row top-15 text-center">-->
+    <!--<div class="col-md-3 col-xs-1 col-sm-3"></div>-->
+    <!--<div class="col-md-3 col-xs-3 col-sm-3 text-left"><a href="file:///Users/Timur/Downloads/adminPartner/index.html" class="btn btn-primary btn-lg">Домой</a></div>-->
+    <!--<div class="col-md-3 col-xs-4 col-sm-3 text-right"><a href="" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-earphone"></span> <span>Позвонить клиенту</span></a></div>-->
+    <!--<div class="col-md-3 col-xs-3 col-sm-3"></div>-->
+  <!--</div>-->
+
+  <!--<div class="button">-->
+
+
+  <!--</div>-->
+  <!--<h3 class="text-center">1.) 0.150 км Игорь 200 руб</h3>-->
+  <!--<div class="list">-->
+    <!--<div class="table-responsive">-->
+      <!--<table class="table ">-->
+        <!--<tr>-->
+          <!--<td>Сендвич</td>-->
+          <!--<td style="text-align: right">-->
+            <!--<div class="catalog__qty text-right">-->
+              <!--<a href="#" class="jq-dec btn btn btn-default" style="margin-right:7px;">-->
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="1 1 14 14">-->
+                  <!--<path d="M1 7h14v2H1z"></path>-->
+                <!--</svg>-->
+              <!--</a><span class="jq-input catalog__qty-value">0</span>-->
+              <!--<a href="https://www.google.com" class="jq-inc btn btn-default" style="margin-left:5px;">-->
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="1 1 14 14">-->
+                  <!--<path d="M15 7H9V1H7v6H1v2h6v6h2V9h6"></path>-->
+                <!--</svg>-->
+              <!--</a>-->
+            <!--</div>-->
+
+          <!--</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+          <!--<td>Кола</td>-->
+          <!--<td style="text-align: right">-->
+            <!--<div class="catalog__qty text-right">-->
+              <!--<a href="#" class="jq-dec btn btn btn-default" style="margin-right:7px;">-->
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="1 1 14 14">-->
+                  <!--<path d="M1 7h14v2H1z"></path>-->
+                <!--</svg>-->
+              <!--</a><span class="jq-input catalog__qty-value">0</span>-->
+              <!--<a href="https://www.google.com" class="jq-inc btn btn-default" style="margin-left:5px;">-->
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="1 1 14 14">-->
+                  <!--<path d="M15 7H9V1H7v6H1v2h6v6h2V9h6"></path>-->
+                <!--</svg>-->
+              <!--</a>-->
+            <!--</div>-->
+          <!--</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+          <!--<td>Картошка</td>-->
+          <!--<td style="text-align: right">-->
+            <!--<div class="catalog__qty text-right">-->
+              <!--<a href="#" class="jq-dec btn btn btn-default" style="margin-right:7px;">-->
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="1 1 14 14">-->
+                  <!--<path d="M1 7h14v2H1z"></path>-->
+                <!--</svg>-->
+              <!--</a><span class="jq-input catalog__qty-value">0</span>-->
+              <!--<a href="https://www.google.com" class="jq-inc btn btn-default" style="margin-left:5px;">-->
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="1 1 14 14">-->
+                  <!--<path d="M15 7H9V1H7v6H1v2h6v6h2V9h6"></path>-->
+                <!--</svg>-->
+              <!--</a>-->
+            <!--</div>-->
+
+          <!--</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+          <!--<td>Мороженое</td>-->
+          <!--<td style="text-align: right">-->
+            <!--<div class="catalog__qty text-right">-->
+              <!--<a href="#" class="jq-dec btn btn btn-default" style="margin-right:7px;">-->
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="1 1 14 14">-->
+                  <!--<path d="M1 7h14v2H1z"></path>-->
+                <!--</svg>-->
+              <!--</a><span class="jq-input catalog__qty-value">0</span>-->
+              <!--<a href="https://www.google.com" class="jq-inc btn btn-default" style="margin-left:5px;">-->
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="1 1 14 14">-->
+                  <!--<path d="M15 7H9V1H7v6H1v2h6v6h2V9h6"></path>-->
+                <!--</svg>-->
+              <!--</a>-->
+            <!--</div>-->
+
+          <!--</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+          <!--<td>соус heinz</td>-->
+          <!--<td style="text-align: right">-->
+            <!--<div class="catalog__qty text-right">-->
+              <!--<a href="#" class="jq-dec btn btn btn-default" style="margin-right:7px;">-->
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="1 1 14 14">-->
+                  <!--<path d="M1 7h14v2H1z"></path>-->
+                <!--</svg>-->
+              <!--</a><span class="jq-input catalog__qty-value">0</span>-->
+              <!--<a href="https://www.google.com" class="jq-inc btn btn-default" style="margin-left:5px;">-->
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="1 1 14 14">-->
+                  <!--<path d="M15 7H9V1H7v6H1v2h6v6h2V9h6"></path>-->
+                <!--</svg>-->
+              <!--</a>-->
+            <!--</div>-->
+
+          <!--</td>-->
+        <!--</tr>-->
+      <!--</table>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<div class="row">-->
+    <!--<div class="col-md-3"></div>-->
+    <!--<div class="col-md-6"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acf4f1c70d3741e468afd30933acf6acaabf042cfe9fbde4ad7608579d65b547b&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script> <br></div>-->
+    <!--<div class="col-md-2"></div>-->
+  <!--</div>-->
+  <!--<div class="wrapper bottom-15">-->
+    <!--<a class="line big offline btn btn-danger btn-lg" href="#">Завершить заказ</a>-->
+  <!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash;<script>&ndash;&gt;-->
+  <!--&lt;!&ndash;$(document).ready(function() {&ndash;&gt;-->
+    <!--&lt;!&ndash;var state = 'off';&ndash;&gt;-->
+
+    <!--&lt;!&ndash;$('.line').on('click', function() {&ndash;&gt;-->
+      <!--&lt;!&ndash;// TOGGLE&ndash;&gt;-->
+      <!--&lt;!&ndash;if (state == 'on') {&ndash;&gt;-->
+        <!--&lt;!&ndash;state = 'off';&ndash;&gt;-->
+        <!--&lt;!&ndash;// change text&ndash;&gt;-->
+        <!--&lt;!&ndash;$('.line').html('OFFLINE');&ndash;&gt;-->
+        <!--&lt;!&ndash;// change color&ndash;&gt;-->
+        <!--&lt;!&ndash;$(this).toggleClass('offline').toggleClass('online');&ndash;&gt;-->
+        <!--&lt;!&ndash;// Send State to php - save db&ndash;&gt;-->
+
+      <!--&lt;!&ndash;} else {&ndash;&gt;-->
+        <!--&lt;!&ndash;// change text&ndash;&gt;-->
+        <!--&lt;!&ndash;$('.line').html('Завершено');&ndash;&gt;-->
+        <!--&lt;!&ndash;state = 'on';&ndash;&gt;-->
+        <!--&lt;!&ndash;// change color&ndash;&gt;-->
+        <!--&lt;!&ndash;$(this).toggleClass('offline').toggleClass('online');&ndash;&gt;-->
+        <!--&lt;!&ndash;// Send State to php - save db&ndash;&gt;-->
+      <!--&lt;!&ndash;}&ndash;&gt;-->
+
+    <!--&lt;!&ndash;});&ndash;&gt;-->
+
+  <!--&lt;!&ndash;});&ndash;&gt;-->
+
+<!--&lt;!&ndash;</script>&ndash;&gt;-->

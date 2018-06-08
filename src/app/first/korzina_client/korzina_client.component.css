@@ -1,0 +1,290 @@
+body {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+header{
+    background: #a60000;
+    height: 200px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin-bottom: 25px;
+}
+
+ol{
+    margin: 25px auto;
+    display: block;
+
+}
+
+header img{
+    width: 50%;
+}
+
+
+
+ol li{
+    margin: 10px 0;
+
+    font-size: 22px;
+    list-style: none
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.img-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto
+}
+
+.button{
+    text-align: center;
+    width: 80%;
+    margin: auto
+}
+
+.butt-home{
+    padding: 10px;
+    display: inline-block;
+    background: #960100;
+    color: #fff;
+    text-decoration: none;
+    width: 120px;
+    text-align: center;
+    margin: auto;
+    margin: 5px 0;
+}
+
+.butt-menu{
+    padding: 10px;
+    display: inline-block;
+    border: 2px solid black;
+    color: #000;
+    text-decoration: none;
+    width: 140px;
+    text-align: center;
+     margin: auto;
+    background: orange;
+    color: #fff;
+    line-height: 45px;
+    margin: 5px auto;
+}
+
+.butt-link{
+    padding: 10px;
+    display: block;
+    border: 2px solid black;
+    color: #000;
+    text-decoration: none;
+    width: 140px;
+    text-align: center;
+     margin: auto;
+    background: #b2f0ff;
+    margin: 5px auto;
+}
+
+.butt-map{
+    padding: 10px 10px;
+    display: block;
+    background: #00d7e0;
+    color: #fff;
+    text-decoration: none;
+    width: 120px;
+    text-align: center;
+     margin: 5px auto;
+}
+
+.wrapper{
+    text-align: center;
+}
+
+table.table{
+    width: 50%;
+    font-size: 20px;
+    margin: 20px auto;
+}
+
+
+
+
+
+.line {
+  text-decoration: none;
+  outline: none;
+  outline: 0;
+  text-align: center;
+}
+/* when clicked */
+/* Pick up from here: Mess with state offline to online transition */
+
+.big:active {
+  letter-spacing: -1px;
+  font-size:16px;
+  border: transparent;
+}
+
+.big {
+  font-size: 16px;
+  line-height: 2.4em;
+  font-weight: bold;
+  letter-spacing: -1px;
+  /* neater */
+
+  padding: 15px 25px;
+    text-align: center;
+  /* round corners: */
+
+  /* or round: */
+  /* border-radius: 50%; */
+
+  /* suddle */
+ transition: all;
+}
+
+.normal {
+  /* TO DO */
+}
+
+.small {
+  /* TO DO */
+}
+
+.sendOrder {
+  background-color: green;
+  color: white;
+
+}
+
+.sentOrder {
+  /* TO DO */
+
+  background-color: darkgreen;
+  color: white;
+
+  /* suddle */
+
+
+}
+
+table{
+    margin: auto
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px){
+
+      .button .butt-home{
+          text-align: left !important;
+      }
+      .butt-home{
+          width: 90%;
+      }
+
+      .butt-map{
+          width: 90%;
+      }
+
+      ol li{
+          font-size: 18px;
+      }
+
+}
+
+@media screen and (max-width: 768px) {
+	.table.korzina-table {
+		font-size: 9px;
+	}
+	a.btn.btn-lg {
+		font-size: 14px;
+	}
+	input[type=number]{
+		width: 55px;
+	}
+	p.summa {
+		font-size: 14px;
+	}
+	a.btn.btn-default {
+		padding: 2px 4px;
+		font-size: 10px;
+	}
+}
+
+/* form styles */
+form .row {
+display: block;
+padding: 7px 8px;
+margin-bottom: 7px;
+}
+form .row:hover {
+background: #f1f7fa;
+}
+
+form label {
+display: inline-block;
+font-size: 1.2em;
+font-weight: bold;
+width: 120px;
+padding: 6px 0;
+color: #464646;
+vertical-align: top;
+}
+form .req { color: #ca5354; }
+
+form .note {
+font-size: 1.2em;
+line-height: 1.33em;
+font-weight: normal;
+padding: 2px 7px;
+margin-bottom: 10px;
+}
+
+form input:focus, form textarea:focus { outline: none; }
+
+/* placeholder styles: http://stackoverflow.com/a/2610741/477958 */
+::-webkit-input-placeholder { color: #aaafbd; font-style: italic; } /* WebKit */
+:-moz-placeholder { color: #aaafbd; font-style: italic; } /* Mozilla Firefox 4 to 18 */
+::-moz-placeholder { color: #aaafbd; font-style: italic; } /* Mozilla Firefox 19+ */
+:-ms-input-placeholder { color: #aaafbd; font-style: italic; } /* Internet Explorer 10+ */
+
+form .txt {
+display: inline-block;
+padding: 8px 9px;
+padding-right: 30px;
+width: 240px;
+font-family: 'Oxygen', sans-serif;
+font-size: 1.35em;
+font-weight: normal;
+color: #898989;
+}
+
+.top-15 {
+	margin-top: 15px;
+}
+.top-30 {
+	margin-top: 30px;
+}
+.bottom-15 {
+	margin-bottom: 15px;
+}
+.korzina-table td, .korzina-table tr, .korzina-table th {
+	text-align: center;
+}
+input[type=number]{
+	text-align: center;
+}
+textarea {
+	border: 1px solid lightgrey;
+}
+.summa {
+	font-size: 18px;
+}
