@@ -1,10 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './routing.module'
+import { AppRoutingModule } from './routing.module';
 import { AppComponent } from './app.component';
-import { FooComponent } from './first/foo/foo.component'
 // import { Foo2Component } from './menu/menu.component'
-import { FirstModule } from './first/first.module'
+import { FirstModule } from './first/first.module';
 
 
 @NgModule({
