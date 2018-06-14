@@ -1,0 +1,199 @@
+<div class="main" *ngFor="let product of products">
+  <div class="item-list"><div class="item">
+    <div class="item-photo-and-price">
+      <div class="item-photo-wrap">
+        <img class="item-photo" [src]="product.product.photo">
+      </div>
+      <div class="item-price">{{product.product.price}}</div>
+
+    </div>
+    <div class="item-info" >
+      <h3 class="item-title">{{product.product.title}}</h3>
+      <div class="item-description">{{product.product.description}}</div>
+      <!--<div class="item-count">-->
+        <!--<button mat-mini-fab>-</button>-->
+        <!--<div class="count" style="font-size: 130%"> 0 </div>-->
+        <!--<button mat-mini-fab>+</button>-->
+      <!--</div>-->
+      <div class="counter-wrap">
+        <div class="counter">
+          <button mat-mini-fab (click)="decrease(product)">-</button>
+          <div class="count" style="font-size: 130%"> {{ product.amount }}</div>
+          <button mat-mini-fab (click)="increase(product)">+</button>
+        </div>
+      </div>
+
+
+    </div>
+    <!--<div class="item-count-wrap">-->
+      <!--<div class="item-count">-->
+        <!--<button mat-mini-fab>-</button>-->
+        <!--<div class="count"> 0 </div>-->
+        <!--<button mat-mini-fab>+</button>-->
+      <!--</div>-->
+    <!--</div>>-->
+
+
+  </div></div>
+
+</div>
+
+<!--<div class="main">-->
+  <!--<div class="item-list"><div class="item">-->
+    <!--<div class="item-photo-and-price">-->
+      <!--<div class="item-photo-wrap">-->
+        <!--<img class="item-photo" src="assets/гамбургер.jpg">-->
+      <!--</div>-->
+      <!--<div class="item-price">100 руб</div>-->
+
+    <!--</div>-->
+    <!--<div class="item-info" >-->
+      <!--<h3 class="item-title">гамбургер </h3>-->
+      <!--<div class="item-description"> бургер с сыром и помидором</div>-->
+      <!--<div class="item-count">-->
+        <!--<button mat-mini-fab>-</button>-->
+        <!--<div class="count" style="font-size: 130%"> 0 </div>-->
+        <!--<button mat-mini-fab>+</button>-->
+      <!--</div>-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash;<div class="item-count-wrap">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="item-count">&ndash;&gt;-->
+    <!--&lt;!&ndash;<button mat-mini-fab>-</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="count"> 0 </div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<button mat-mini-fab>+</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>>&ndash;&gt;-->
+
+
+  <!--</div></div>-->
+
+<!--</div>-->
+
+<!--<div class="main">-->
+  <!--<div class="item-list"><div class="item">-->
+    <!--<div class="item-photo-and-price">-->
+      <!--<div class="item-photo-wrap">-->
+        <!--<img class="item-photo" src="assets/мороженое_макфлури.jpg">-->
+      <!--</div>-->
+      <!--<div class="item-price">50 руб</div>-->
+
+    <!--</div>-->
+    <!--<div class="item-info" >-->
+      <!--<h3 class="item-title">Мороженое </h3>-->
+      <!--<div class="item-description"> мороженое макфлури</div>-->
+      <!--<div class="item-count">-->
+        <!--<button mat-mini-fab>-</button>-->
+        <!--<div class="count" style="font-size: 130%"> 0 </div>-->
+        <!--<button mat-mini-fab>+</button>-->
+      <!--</div>-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash;<div class="item-count-wrap">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="item-count">&ndash;&gt;-->
+    <!--&lt;!&ndash;<button mat-mini-fab>-</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="count"> 0 </div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<button mat-mini-fab>+</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>>&ndash;&gt;-->
+
+
+  <!--</div></div>-->
+
+<!--</div>-->
+
+<!--<div class="main">-->
+  <!--<div class="item-list"><div class="item">-->
+    <!--<div class="item-photo-and-price">-->
+      <!--<div class="item-photo-wrap">-->
+        <!--<img class="item-photo" src="assets/гамбургер.jpg">-->
+      <!--</div>-->
+      <!--<div class="item-price">50 руб</div>-->
+
+    <!--</div>-->
+    <!--<div class="item-info" >-->
+      <!--<h3 class="item-title">гамбургер </h3>-->
+      <!--<div class="item-description"> бургер с сыром и помидором</div>-->
+      <!--<div class="item-count">-->
+        <!--<button mat-mini-fab>-</button>-->
+        <!--<div class="count" style="font-size: 130%"> 0 </div>-->
+        <!--<button mat-mini-fab>+</button>-->
+      <!--</div>-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash;<div class="item-count-wrap">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="item-count">&ndash;&gt;-->
+    <!--&lt;!&ndash;<button mat-mini-fab>-</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="count"> 0 </div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<button mat-mini-fab>+</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>>&ndash;&gt;-->
+
+
+  <!--</div></div>-->
+
+<!--</div>-->
+
+<!--<div class="main">-->
+  <!--<div class="item-list"><div class="item">-->
+    <!--<div class="item-photo-and-price">-->
+      <!--<div class="item-photo-wrap">-->
+        <!--<img class="item-photo" src="assets/гамбургер.jpg">-->
+      <!--</div>-->
+      <!--<div class="item-price">110 руб</div>-->
+
+    <!--</div>-->
+    <!--<div class="item-info" >-->
+      <!--<h3 class="item-title">гамбургер </h3>-->
+      <!--<div class="item-description"> бургер с сыром и помидором</div>-->
+      <!--<div class="item-count">-->
+        <!--<button mat-mini-fab>-</button>-->
+        <!--<div class="count" style="font-size: 130%"> 0 </div>-->
+        <!--<button mat-mini-fab>+</button>-->
+      <!--</div>-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash;<div class="item-count-wrap">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="item-count">&ndash;&gt;-->
+    <!--&lt;!&ndash;<button mat-mini-fab>-</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="count"> 0 </div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<button mat-mini-fab>+</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>>&ndash;&gt;-->
+
+
+  <!--</div></div>-->
+
+<!--</div>-->
+
+<!--<div class="main">-->
+  <!--<div class="item-list"><div class="item">-->
+    <!--<div class="item-photo-and-price">-->
+      <!--<div class="item-photo-wrap">-->
+        <!--<img class="item-photo" src="assets/гамбургер.jpg">-->
+      <!--</div>-->
+      <!--<div class="item-price">50 руб</div>-->
+
+    <!--</div>-->
+    <!--<div class="item-info" >-->
+      <!--<h3 class="item-title">гамбургер </h3>-->
+      <!--<div class="item-description"> бургер с сыром и помидором</div>-->
+      <!--<div class="item-count">-->
+        <!--<button mat-mini-fab>-</button>-->
+        <!--<div class="count" style="font-size: 130%"> 0 </div>-->
+        <!--<button mat-mini-fab>+</button>-->
+      <!--</div>-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash;<div class="item-count-wrap">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="item-count">&ndash;&gt;-->
+    <!--&lt;!&ndash;<button mat-mini-fab>-</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="count"> 0 </div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<button mat-mini-fab>+</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>>&ndash;&gt;-->
+
+
+  <!--</div></div>-->
+
+<!--</div>-->

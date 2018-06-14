@@ -3,16 +3,19 @@ import { MatButtonModule } from '@angular/material';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MenuComponent} from './menu/menu.component';
-import { PzakaziComponent } from './pzakazi/pzakazi.component';
-import { Korzina_clientComponent } from './korzina_client/korzina_client.component';
-import { Padminmenu } from './padminmenu/padminmenu.component';
-import { Zakaz1Component } from './zakaz1/zakaz1.component';
-import { CounterComponent } from './counter/counter.component';
+import { MenuComponent} from './components/menu/menu.component';
+import { PzakaziComponent } from './components/pzakazi/pzakazi.component';
+import { Korzina_clientComponent } from './components/korzina_client/korzina_client.component';
+import { Padminmenu } from './components/padminmenu/padminmenu.component';
+import { Zakaz1Component } from './components/zakaz1/zakaz1.component';
+import { CounterComponent } from './components/counter/counter.component';
 
 
 
 import {MatGridListModule} from '@angular/material/grid-list';
+import {HttpClient} from "@angular/common/http";
+import {BasketService} from "./services/basket.service";
+import {StoreService} from "./services/store.service";
 
 // import { Foo4Component } from './foo4/foo4.component';
 
@@ -33,7 +36,12 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatCheckboxModule,
     MatSidenavModule,
     BrowserAnimationsModule,
-    MatGridListModule
+    MatGridListModule,
+  ],
+  providers: [
+    HttpClient,
+    BasketService,
+    StoreService
   ]
 })
 
