@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MenuComponent } from './first/components/menu/menu.component';
-import { PzakaziComponent } from './first/components/pzakazi/pzakazi.component';
-import { Korzina_clientComponent } from './first/components/korzina_client/korzina_client.component';
-import {Padminmenu} from './first/components/padminmenu/padminmenu.component';
-import {Zakaz1Component} from './first/components/zakaz1/zakaz1.component';
+import { PartnerOrdersComponent } from './first/components/partnerOrders/partnerOrders.component';
+import { BasketComponent } from './first/components/basket/basket.component';
+import {PartnerMenuComponent} from './first/components/partnermenu/partnermenu.component';
+import {OrderComponent} from './first/components/order/order.component';
 
 
 // import { Foo4Component } from './first/foo4/foo4.component'
@@ -18,10 +18,10 @@ import {Zakaz1Component} from './first/components/zakaz1/zakaz1.component';
       [
         {path: 'menu/:id', component: MenuComponent},
 
-        {path: 'korzina_client', component: Korzina_clientComponent},
-        {path: 'padminmenu', component: Padminmenu},
-        {path: 'zakaz1', component: Zakaz1Component},
-        {path: 'pzakazi', component: PzakaziComponent}
+        {path: 'basket/:id', component: BasketComponent},
+        {path: 'partnermenu', component: PartnerMenuComponent},
+        {path: 'order/:id', component: OrderComponent},
+        {path: 'partnerOrders', component: PartnerOrdersComponent}
 
 
 

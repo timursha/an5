@@ -5,26 +5,28 @@
       <button mat-flat-button>right</button>
 
     </div>
-    <div class="route">1) 1 км 150 руб</div>
-    <div class="list">
+    <div *ngIf="order">
+      <div class="route">{{order.id}}) {{order.totalPrice()}}руб</div>
+      <div class="list">
 
 
-      <div class="item" *ngFor="let item of items">
-        <div class="title">{{item.title}}</div>
-        <div class="counter-wrap">
-          <app-counter></app-counter>
+        <div class="item" *ngFor="let product of order.products">
+          <div class="title">{{product.product.title}}</div>
+          <div class="counter-wrap">
+            {{product.amount}}
+          </div>
         </div>
+
+
       </div>
 
+      <div class="map">
 
-    </div>
+      </div>
 
-    <div class="map">
-
-    </div>
-
-    <div class="confirm">
-      <button mat-flat-button>confirm</button>
+      <div class="confirm">
+        <button mat-flat-button>confirm</button>
+      </div>
     </div>
   </div>
 

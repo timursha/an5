@@ -1,5 +1,4 @@
-import {ProductToBuy} from "./ProductToBuy";
-import {Store} from "./Store";
+import {ProductToBuy} from './ProductToBuy';
 
 export class Basket {
   id: number;

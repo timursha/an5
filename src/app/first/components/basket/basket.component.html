@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row top-15 text-center">
+    <div class="col-md-3 col-xs-1 col-sm-3"></div>
+    <div class="col-md-3 col-xs-4 col-sm-3 text-left"><a routerLink="/menu/1" class="btn btn-success btn-lg">Меню</a></div>
+    <div class="col-md-3 col-xs-5 col-sm-3 text-right"><a href="" class="btn btn-warning btn-lg"><span
+      class="glyphicon glyphicon-map-marker"></span><span>Назад на карту</span></a></div>
+    <div class="col-md-3 col-xs-1 col-sm-3"></div>
+  </div>
+  <div class="row top-15 text-center">
+    <div class="col-md-3 col-xs-3"></div>
+    <div class="col-md-6 col-xs-6"><h3 class="text-center">Ваш заказ</h3></div>
+    <div class="col-md-3 col-xs-3"></div>
+  </div>
+
+  <div class="table-responsive" *ngIf="basket">
+    <table class="table korzina-table">
+      <tr>
+      <tr>
+        <th>наименование</th>
+        <th>количество</th>
+        <th>цена за ед</th>
+        <th>цена</th>
+      </tr> <!--ряд с ячейками заголовков-->
+
+      <tr *ngFor="let product of basket.products">
+        <td>{{product.product.title}}</td>
+        <td style="text-align: left">
+          <div class="counter">
+            <button mat-mini-fab (click)="decrease(product)">-</button>
+            <div class="count" style="font-size: 130%"> {{ product.amount }}</div>
+            <button mat-mini-fab (click)="increase(product)">+</button>
+          </div>
+        <td>{{product.product.price}}</td>
+        <td>{{product.product.price * product.amount}}</td>
+      </tr>
+    </table>
+    <p class="text-center top-15 summa">ИТОГОВАЯ СТОИМОСТЬ - {{getTotalPrice()}} руб</p>
+  </div>
+
+  <div class="row top-15 bottom-15;">
+    <div class="col-md-3"></div>
+    <div class="cover col-md-4 col-xs-4">
+      <!--<form>-->
+        <!--<p class="contact"><label for="comment">комментарий к заказу</label></p>-->
+        <!--<textarea name="comment" id="comment" tabindex="4" rows="7" cols="35"></textarea> <br>-->
+        <!--<input class="btn btn-default" name="submit" id="submit" tabindex="5" value="Отправить" type="submit">-->
+      <!--</form>-->
+    </div>
+    <div class="col-md-4 col-xs-4"></div>
+  </div>
+  <div class="row text-center top-30 bottom-15">
+    <div class="col-md-4 col-xs-4"></div>
+    <div class="col-md-4 col-xs-4"><a class="line big sentOrder btn btn-danger btn-lg" (click)="confirmBasket()">Отправить заказ</a>
+    </div>
+    <div class="col-md-4 col-xs-4"></div>
+  </div>
+</div>

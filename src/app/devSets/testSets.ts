@@ -1,7 +1,8 @@
-import {Product} from "../first/models/Product";
-import {ProductToBuy} from "../first/models/ProductToBuy";
-import {Basket} from "../first/models/Basket";
-import {Store} from "../first/models/Store";
+import {Product} from '../first/models/Product';
+import {ProductToBuy} from '../first/models/ProductToBuy';
+import {Basket} from '../first/models/Basket';
+import {Store} from '../first/models/Store';
+import {Order} from '../first/models/Order';
 
 
 export const testProducts: Product[] = [
@@ -16,9 +17,9 @@ export const testProducts: Product[] = [
   {
     id: 2,
     price: 100,
-    title: 'Test product 1',
+    title: 'Test product 2',
     photo: 'http://oss2014.adm.ntu.edu.sg/marla/wp-content/uploads/sites/20/2014/01/test.jpg',
-    description: 'This is test product 1',
+    description: 'This is test product 2',
     category: '123',
   },
   {
@@ -105,21 +106,21 @@ export const testBasket: Basket = {
   products: testProductsToBuy,
 };
 
-//
-// export const testOrders: Order[] = [
-//   new Order(1, '12:11', false, testProductsToBuy),
-//   new Order(2, '12:13', false, testProductsToBuy),
-//   new Order(3, '12:20', false, testProductsToBuy),
-//   new Order(4, '12:19', false, testProductsToBuy),
-//   new Order(5, '12:15', false, testProductsToBuy),
-//   new Order(6, '12:10', false, testProductsToBuy),
-//   new Order(7, '12:21', false, testProductsToBuy),
-//   new Order(8, '12:25', false, testProductsToBuy),
-//   new Order(9, '12:30', false, testProductsToBuy),
-// ];
 
-// export const testOrder: Order = new Order(1, '12:21', false, testProductsToBuy);
-//
+export const testOrders: Order[] = [
+  new Order(1, '12:11', false, testProductsToBuy),
+  new Order(2, '12:13', false, testProductsToBuy),
+  new Order(3, '12:20', false, testProductsToBuy),
+  new Order(4, '12:19', false, testProductsToBuy),
+  new Order(5, '12:15', false, testProductsToBuy),
+  new Order(6, '12:10', false, testProductsToBuy),
+  new Order(7, '12:21', false, testProductsToBuy),
+  new Order(8, '12:25', false, testProductsToBuy),
+  new Order(9, '12:30', false, testProductsToBuy),
+];
+
+export const testOrder: Order = new Order(1, '12:21', false, testProductsToBuy);
+
 export const testStore: Store = {
   id: 1,
   title: 'Test store',
@@ -128,6 +129,16 @@ export const testStore: Store = {
   longitude: 37,
   products: testProducts,
 };
+
+// export const testOrder: Order =  {
+//   id: 1,
+//   shop: 1,
+//   products: testProductsToBuy,
+//
+//   delivered: false,
+//   deliveredAt: null,
+//   createdAt: '22:00 12.12.12'
+// }
 
 // export function getTestSet<T>(): T {
 //   console.log(T);
