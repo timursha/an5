@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="row top-15 text-center">
+  <div class="row top-15 text-center" *ngIf="basket">
     <div class="col-md-3 col-xs-1 col-sm-3"></div>
-    <div class="col-md-3 col-xs-4 col-sm-3 text-left"><a routerLink="/menu/1" class="btn btn-success btn-lg">Меню</a></div>
+    <div class="col-md-3 col-xs-4 col-sm-3 text-left"><a [routerLink]="['/menu', basket.shop]" class="btn btn-success btn-lg">Меню</a></div>
     <div class="col-md-3 col-xs-5 col-sm-3 text-right"><a href="" class="btn btn-warning btn-lg"><span
       class="glyphicon glyphicon-map-marker"></span><span>Назад на карту</span></a></div>
     <div class="col-md-3 col-xs-1 col-sm-3"></div>
@@ -12,7 +12,7 @@
     <div class="col-md-3 col-xs-3"></div>
   </div>
 
-  <div class="table-responsive" *ngIf="basket">
+  <div class="table-responsive">
     <table class="table korzina-table">
       <tr>
       <tr>

@@ -15,6 +15,7 @@ import {StoreService} from './services/store.service';
 import {BasketComponent} from './components/basket/basket.component';
 import {ProductService} from './services/product.service';
 import {OrderService} from './services/order.service';
+import {RouterModule} from '@angular/router';
 
 // import { Foo4Component } from './foo4/foo4.component';
 
@@ -34,6 +35,7 @@ import {OrderService} from './services/order.service';
     MatSidenavModule,
     BrowserAnimationsModule,
     MatGridListModule,
+    RouterModule
   ],
   providers: [
     HttpClient,
