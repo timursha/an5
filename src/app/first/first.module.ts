@@ -15,6 +15,9 @@ import {StoreService} from './services/store.service';
 import {BasketComponent} from './components/basket/basket.component';
 import {ProductService} from './services/product.service';
 import {OrderService} from './services/order.service';
+import {ChangeProductComponent} from './components/changeProduct/changeProduct.component';
+import { FormsModule } from '@angular/forms';
+
 
 // import { Foo4Component } from './foo4/foo4.component';
 
@@ -27,6 +30,7 @@ import {OrderService} from './services/order.service';
     PartnerMenuComponent,
     OrderComponent,
     CounterComponent,
+    ChangeProductComponent
   ],
   imports: [
     MatButtonModule,
@@ -34,6 +38,7 @@ import {OrderService} from './services/order.service';
     MatSidenavModule,
     BrowserAnimationsModule,
     MatGridListModule,
+    FormsModule,
   ],
   providers: [
     HttpClient,
