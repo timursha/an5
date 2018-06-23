@@ -16,6 +16,9 @@ import {BasketComponent} from './components/basket/basket.component';
 import {ProductService} from './services/product.service';
 import {OrderService} from './services/order.service';
 import {RouterModule} from '@angular/router';
+import {ChangeProductComponent} from './components/changeProduct/changeProduct.component';
+import { FormsModule } from '@angular/forms';
+
 
 // import { Foo4Component } from './foo4/foo4.component';
 
@@ -28,6 +31,7 @@ import {RouterModule} from '@angular/router';
     PartnerMenuComponent,
     OrderComponent,
     CounterComponent,
+    ChangeProductComponent
   ],
   imports: [
     MatButtonModule,
@@ -35,7 +39,8 @@ import {RouterModule} from '@angular/router';
     MatSidenavModule,
     BrowserAnimationsModule,
     MatGridListModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
   ],
   providers: [
     HttpClient,
