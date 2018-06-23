@@ -89,6 +89,9 @@ export const testProducts: Product[] = [
 
 ];
 
+export const testProduct: Product = testProducts[0];
+
+
 export const testProductsToBuy: ProductToBuy[] = [
   {product: testProducts[0], amount: 1},
   {product: testProducts[1], amount: 3},

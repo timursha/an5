@@ -22,7 +22,7 @@ export class OrderService {
 
   getOrder(id: string): Observable<Order> {
     return this.http.get<Order>(`api/orders/shop/${id}`).pipe(
-      catchError(handleError('getBasket', testOrder))
+      catchError(handleError('getOrder', testOrder))
     );
   }
 }

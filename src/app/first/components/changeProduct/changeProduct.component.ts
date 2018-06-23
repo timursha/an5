@@ -4,9 +4,10 @@ import {ActivatedRoute, ParamMap} from '@angular/router';
 import {forkJoin} from 'rxjs';
 import {Store} from '../../models/Store';
 import {StoreService} from '../../services/store.service';
-import {Product} from '../../models/Product'
+import {Product} from '../../models/Product';
 import {BasketService} from '../../services/basket.service';
 import {parseCookieValue} from '@angular/common/src/cookie';
+import {ProductService} from '../../services/product.service';
 
 @Component({
   templateUrl: './changeProduct.component.html',
@@ -20,20 +21,12 @@ export class ChangeProductComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
       const productId = params.get('id');
-      const store$ = this.storeService.getStore('0');
-
-      store$.subscribe((store) => {
-        const product = store.products.find((element)  => {
-          return element.id === parseInt(productId);
-        })
-        this.product = product;
-        console.log('ELEEMNT IS', product);
-      });
+      this.productService.getProduct(productId).subscribe((product: Product) => this.product = product);
     });
   }
 
   constructor(private route: ActivatedRoute,
-              private storeService: StoreService) {
+              private productService: ProductService) {
     // this.route.paramMap.subscribe((params: ParamMap) => {
     //   const store$ = this.storeService.getStore(params.get('id'));
     //   const basket$ = this.basketService.getBasket(params.get('id'));
