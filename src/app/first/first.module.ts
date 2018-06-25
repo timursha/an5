@@ -16,8 +16,10 @@ import {BasketComponent} from './components/basket/basket.component';
 import {ProductService} from './services/product.service';
 import {OrderService} from './services/order.service';
 import {RouterModule} from '@angular/router';
-import {ChangeProductComponent} from './components/changeProduct/changeProduct.component';
-import { FormsModule } from '@angular/forms';
+import {ProductFormComponent} from './components/product/productForm/productForm.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 
 
 // import { Foo4Component } from './foo4/foo4.component';
@@ -31,7 +33,9 @@ import { FormsModule } from '@angular/forms';
     PartnerMenuComponent,
     OrderComponent,
     CounterComponent,
-    ChangeProductComponent
+    ProductFormComponent,
+    ProductEditComponent,
+    ProductCreateComponent
   ],
   imports: [
     MatButtonModule,
@@ -41,6 +45,7 @@ import { FormsModule } from '@angular/forms';
     MatGridListModule,
     RouterModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     HttpClient,

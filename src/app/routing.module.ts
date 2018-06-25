@@ -5,7 +5,9 @@ import { PartnerOrdersComponent } from './first/components/partnerOrders/partner
 import { BasketComponent } from './first/components/basket/basket.component';
 import {PartnerMenuComponent} from './first/components/partnermenu/partnermenu.component';
 import {OrderComponent} from './first/components/order/order.component';
-import {ChangeProductComponent} from './first/components/changeProduct/changeProduct.component';
+import {ProductFormComponent} from './first/components/product/productForm/productForm.component';
+import {ProductEditComponent} from './first/components/product/product-edit/product-edit.component';
+import {ProductCreateComponent} from './first/components/product/product-create/product-create.component';
 
 
 // import { Foo4Component } from './first/foo4/foo4.component'
@@ -23,7 +25,9 @@ import {ChangeProductComponent} from './first/components/changeProduct/changePro
         {path: 'partnermenu', component: PartnerMenuComponent},
         {path: 'order/:id', component: OrderComponent},
         {path: 'partnerOrders', component: PartnerOrdersComponent},
-        {path: 'changeProduct/:id', component: ChangeProductComponent}
+        {path: 'product/edit/:id', component: ProductEditComponent},
+        {path: 'product/create', component: ProductCreateComponent}
+
 
 
 

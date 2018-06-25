@@ -23,4 +23,12 @@ export class ProductService {
       catchError(handleError('getProduct', testProduct))
     );
   }
+
+  editProduct(product: Product): void {
+    this.http.post(`api/map/product/${product.id}`, product).subscribe(res => console.log(res));
+  }
+
+  createProduct(product: Product): void {
+    this.http.post('api/map/product', product).subscribe(res => console.log(res));
+  }
 }

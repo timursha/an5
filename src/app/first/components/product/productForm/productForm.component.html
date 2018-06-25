@@ -1,0 +1,100 @@
+<div class="container">
+
+
+  <form [formGroup]="productForm" #formDir="ngForm">
+
+    <div [hidden]="formDir.submitted">
+
+      <div class="form-group">
+
+        <label for="title">Title</label>
+        <input id="title" class="form-control"
+               formControlName="title" required>
+
+        <div *ngIf="title.invalid && (title.dirty || title.touched)"
+             class="alert alert-danger">
+
+          <div *ngIf="title.errors.required">
+            Title is required.
+          </div>
+          <div *ngIf="title.errors.minlength">
+            Title must be at least 3 characters long.
+          </div>
+          <div *ngIf="title.errors">
+            {{title.errors}}
+          </div>
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input id="description" class="form-control"
+               formControlName="description">
+      </div>
+      <div *ngIf="description.invalid"
+           class="alert alert-danger">
+        <div *ngIf="description.errors">
+          {{description.errors}}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input id="price" class="form-control" type="number"
+               formControlName="price" required>
+      </div>
+      <div *ngIf="price.invalid"
+           class="alert alert-danger">
+        <div *ngIf="price.errors">
+          {{price.errors}}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="photo">Photo</label>
+        <input id="photo" class="form-control"
+               formControlName="photo" required>
+      </div>
+      <div *ngIf="photo.invalid"
+           class="alert alert-danger">
+        <div *ngIf="photo.errors">
+          {{photo.errors}}
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="category">Category</label>
+        <input id="category" class="form-control"
+               formControlName="category" required>
+      </div>
+      <div *ngIf="category.invalid"
+           class="alert alert-danger">
+        <div *ngIf="category.errors">
+          {{category.errors}}
+        </div>
+      </div>
+
+
+      <button type="submit" class="btn btn-default"
+              [disabled]="productForm.invalid">Submit
+      </button>
+      <button type="button" class="btn btn-default"
+              (click)="formDir.resetForm({})">Reset
+      </button>
+    </div>
+  </form>
+
+  <div class="submitted-message" *ngIf="formDir.submitted">
+    <p>You've submitted your hero, {{ productForm.value.name }}!</p>
+    <button (click)="formDir.resetForm({})">Add new hero</button>
+  </div>
+</div>
+
+
+<!--
+Copyright 2017-2018 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
