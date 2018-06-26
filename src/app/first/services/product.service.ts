@@ -19,7 +19,7 @@ export class ProductService {
   }
 
   getProduct(id: string): Observable<Product> {
-    return this.http.get<Product>(`api/map/product/${id}`).pipe(
+    return this.http.get<Product>(`api/map/products/${id}`).pipe(
       catchError(handleError('getProduct', testProduct))
     );
   }
