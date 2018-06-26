@@ -22,6 +22,7 @@ import { ProductEditComponent } from './components/product/product-edit/product-
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import {TokenInterceptor} from './services/auth/auth.request';
 import {ErrorInterceptor} from './services/auth/error.request';
+import {AuthService} from './services/auth/auth.service';
 
 
 // import { Foo4Component } from './foo4/foo4.component';
@@ -55,6 +56,7 @@ import {ErrorInterceptor} from './services/auth/error.request';
     StoreService,
     ProductService,
     OrderService,
+    AuthService,
     {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
   ]
