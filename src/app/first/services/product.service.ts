@@ -24,7 +24,8 @@ export class ProductService {
     );
   }
 
-  editProduct(product: Product): void {
+  editProduct(product: any): void {
+    console.log(product);
     this.http.post(`api/map/products/${product.id}/`, product).subscribe(res => console.log(res));
   }
 

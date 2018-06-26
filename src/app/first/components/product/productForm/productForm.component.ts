@@ -22,7 +22,7 @@ export class ProductFormComponent implements OnInit {
     console.log(this.product);
 
     this.productForm = new FormGroup({
-      'title': new FormControl(this.product.title, [Validators.required, Validators.minLength(3)]),
+      'name': new FormControl(this.product.name, [Validators.required, Validators.minLength(3)]),
       'description': new FormControl(this.product.description, [Validators.minLength(10)]),
       'price': new FormControl(this.product.price, [Validators.required, Validators.min(0)]),
       'photo': new FormControl(this.product.photo,
@@ -35,7 +35,7 @@ export class ProductFormComponent implements OnInit {
               private productService: ProductService) {
   }
 
-  get title() { return this.productForm.get('title'); }
+  get name() { return this.productForm.get('name'); }
 
   get description() { return this.productForm.get('description'); }
 
@@ -46,9 +46,10 @@ export class ProductFormComponent implements OnInit {
   get category() { return this.productForm.get('category'); }
 
   submitForm(): void {
+    console.log(this.product);
     if (this.productForm.valid) {
       this.submit.emit({id: this.product.id,
-      title: this.productForm.get('title').value,
+      name: this.productForm.get('name').value,
         description: this.productForm.get('description').value,
         price: this.productForm.get('price').value,
         photo: this.productForm.get('photo').value,

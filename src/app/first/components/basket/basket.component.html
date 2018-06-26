@@ -23,7 +23,7 @@
       </tr> <!--ряд с ячейками заголовков-->
 
       <tr *ngFor="let product of basket.products">
-        <td>{{product.product.title}}</td>
+        <td>{{product.product.name}}</td>
         <td style="text-align: left">
           <div class="counter">
             <button mat-mini-fab (click)="decrease(product)">-</button>
