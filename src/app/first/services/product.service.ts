@@ -15,17 +15,17 @@ export class ProductService {
   }
 
   deleteProduct(id: number): void {
-    this.http.delete(`api/map/admin/product/${id}`).subscribe(res => console.log(res));
+    this.http.delete(`api/map/admin/product/${id}/`).subscribe(res => console.log(res));
   }
 
   getProduct(id: string): Observable<Product> {
-    return this.http.get<Product>(`api/map/products/${id}`).pipe(
+    return this.http.get<Product>(`api/map/products/${id}/`).pipe(
       catchError(handleError('getProduct', testProduct))
     );
   }
 
   editProduct(product: Product): void {
-    this.http.post(`api/map/product/${product.id}`, product).subscribe(res => console.log(res));
+    this.http.post(`api/map/products/${product.id}/`, product).subscribe(res => console.log(res));
   }
 
   createProduct(product: Product): void {
