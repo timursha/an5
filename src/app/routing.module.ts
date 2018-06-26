@@ -23,8 +23,8 @@ import {ProductCreateComponent} from './first/components/product/product-create/
 
         {path: 'basket/:id', component: BasketComponent},
         {path: 'partnermenu', component: PartnerMenuComponent},
-        {path: 'order/:id', component: OrderComponent},
         {path: 'partnerOrders', component: PartnerOrdersComponent},
+        {path: 'order/:id', component: OrderComponent},
         {path: 'product/edit/:id', component: ProductEditComponent},
         {path: 'product/create', component: ProductCreateComponent}
 

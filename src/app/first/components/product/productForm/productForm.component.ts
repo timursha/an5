@@ -27,7 +27,7 @@ export class ProductFormComponent implements OnInit {
       'price': new FormControl(this.product.price, [Validators.required, Validators.min(0)]),
       'photo': new FormControl(this.product.photo,
         [Validators.pattern('((http|https)\:\/\/)?[a-zA-Z0-9\.\/\?\:@\-_=#]+\.([a-zA-Z0-9\&\.\/\?\:@\-_=#])*')]),
-      'category': new FormControl(this.product.category, [Validators.required, Validators.minLength(5)])
+      'category': new FormControl(this.product.category, [Validators.required, Validators.minLength(3)])
     });
   }
 

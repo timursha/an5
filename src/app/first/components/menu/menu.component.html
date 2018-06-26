@@ -1,4 +1,7 @@
+<div class="col-md-3 col-xs-4 col-sm-3 text-left" *ngIf="store"><a [routerLink]="['/basket', store.id]" class="btn btn-success btn-lg">Корзина</a></div>
+
 <div class="main" *ngFor="let product of products">
+
   <div class="item-list"><div class="item">
     <div class="item-photo-and-price">
       <div class="item-photo-wrap">

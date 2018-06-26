@@ -9,8 +9,8 @@
   <div class="row">
     <div class="table-responsive">
       <table class="table" *ngIf="orders">
-        <tr *ngFor="let order of orders">
-          <td><a>{{order.id}}.</a></td>
+        <tr *ngFor="let order of orders" [routerLink]="['/order', order.id]">
+          <td>{{order.id}}.</td>
           <td style="text-align: right">{{order.totalPrice()}} руб</td>
         </tr>
 
