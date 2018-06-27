@@ -1,4 +1,7 @@
+<div class="col-md-3 col-xs-4 col-sm-3 text-left" *ngIf="store"><a [routerLink]="['/basket', store.id]" class="btn btn-success btn-lg">Корзина</a></div>
+
 <div class="main" *ngFor="let product of products">
+
   <div class="item-list"><div class="item">
     <div class="item-photo-and-price">
       <div class="item-photo-wrap">
@@ -8,7 +11,7 @@
 
     </div>
     <div class="item-info" >
-      <h3 class="item-title">{{product.product.title}}</h3>
+      <h3 class="item-title">{{product.product.name}}</h3>
       <div class="item-description">{{product.product.description}}</div>
       <!--<div class="item-count">-->
         <!--<button mat-mini-fab>-</button>-->
@@ -48,7 +51,7 @@
 
     <!--</div>-->
     <!--<div class="item-info" >-->
-      <!--<h3 class="item-title">гамбургер </h3>-->
+      <!--<h3 class="item-name">гамбургер </h3>-->
       <!--<div class="item-description"> бургер с сыром и помидором</div>-->
       <!--<div class="item-count">-->
         <!--<button mat-mini-fab>-</button>-->
@@ -80,7 +83,7 @@
 
     <!--</div>-->
     <!--<div class="item-info" >-->
-      <!--<h3 class="item-title">Мороженое </h3>-->
+      <!--<h3 class="item-name">Мороженое </h3>-->
       <!--<div class="item-description"> мороженое макфлури</div>-->
       <!--<div class="item-count">-->
         <!--<button mat-mini-fab>-</button>-->
@@ -112,7 +115,7 @@
 
     <!--</div>-->
     <!--<div class="item-info" >-->
-      <!--<h3 class="item-title">гамбургер </h3>-->
+      <!--<h3 class="item-name">гамбургер </h3>-->
       <!--<div class="item-description"> бургер с сыром и помидором</div>-->
       <!--<div class="item-count">-->
         <!--<button mat-mini-fab>-</button>-->
@@ -144,7 +147,7 @@
 
     <!--</div>-->
     <!--<div class="item-info" >-->
-      <!--<h3 class="item-title">гамбургер </h3>-->
+      <!--<h3 class="item-name">гамбургер </h3>-->
       <!--<div class="item-description"> бургер с сыром и помидором</div>-->
       <!--<div class="item-count">-->
         <!--<button mat-mini-fab>-</button>-->
@@ -176,7 +179,7 @@
 
     <!--</div>-->
     <!--<div class="item-info" >-->
-      <!--<h3 class="item-title">гамбургер </h3>-->
+      <!--<h3 class="item-name">гамбургер </h3>-->
       <!--<div class="item-description"> бургер с сыром и помидором</div>-->
       <!--<div class="item-count">-->
         <!--<button mat-mini-fab>-</button>-->

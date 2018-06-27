@@ -19,4 +19,11 @@ export class StoreService {
       catchError(handleError('getStore', testStore))
     );
   }
+
+  getAdminStore(): Observable<Store> {
+    return this.http.get<Store>(`api/map/admin/shop/`).pipe(
+      catchError(handleError('getStore', testStore))
+    );
+  }
+
 }

@@ -1,4 +1,6 @@
 <div *ngIf="store">
+  <div class="col-md-3 col-xs-4 col-sm-3 text-left"><a [routerLink]="['/product/create']" class="btn btn-success btn-lg">Добавить</a></div>
+
   <div class="main" *ngFor="let product of store.products">
     <div class="item-list"><div class="item">
       <div class="item-photo-and-price">
@@ -7,12 +9,13 @@
         </div>
         <div class="item-price">{{product.price}} руб</div>
 
+
       </div>
       <div class="item-info" >
-        <h3 class="item-title">{{product.title}}</h3>
+        <h3 class="item-title">{{product.name}}</h3>
         <div class="item-description">{{product.description}}</div>
         <div class="item-count">
-          <button mat-mini-fab>change</button>
+          <button mat-mini-fab [routerLink]="['/product/edit', product.id]">change</button>
           <div class="count" style="font-size: 130%"> </div>
           <button mat-mini-fab (click)="deleteProduct(product)">delete</button>
         </div>
@@ -36,7 +39,7 @@
 
     <!--</div>-->
     <!--<div class="item-info" >-->
-      <!--<h3 class="item-title">картофель фри </h3>-->
+      <!--<h3 class="item-name">картофель фри </h3>-->
       <!--<div class="item-description"> картофель фри жареный</div>-->
       <!--<div class="item-count">-->
         <!--<button mat-mini-fab>change</button>-->
@@ -61,7 +64,7 @@
 
     <!--</div>-->
     <!--<div class="item-info" >-->
-      <!--<h3 class="item-title">картофель фри </h3>-->
+      <!--<h3 class="item-name">картофель фри </h3>-->
       <!--<div class="item-description"> картофель фри жареный</div>-->
       <!--<div class="item-count">-->
         <!--<button mat-mini-fab>change</button>-->
@@ -86,7 +89,7 @@
 
     <!--</div>-->
     <!--<div class="item-info" >-->
-      <!--<h3 class="item-title">картофель фри </h3>-->
+      <!--<h3 class="item-name">картофель фри </h3>-->
       <!--<div class="item-description"> картофель фри жареный</div>-->
       <!--<div class="item-count">-->
         <!--<button mat-mini-fab>change</button>-->

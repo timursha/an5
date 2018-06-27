@@ -9,7 +9,7 @@ export const testProducts: Product[] = [
   {
     id: 1,
     price: 100,
-    title: 'Test product 1',
+    name: 'Test product 1',
     photo: 'http://oss2014.adm.ntu.edu.sg/marla/wp-content/uploads/sites/20/2014/01/test.jpg',
     description: 'This is test product 1',
     category: '123',
@@ -17,7 +17,7 @@ export const testProducts: Product[] = [
   {
     id: 2,
     price: 100,
-    title: 'Test product 2',
+    name: 'Test product 2',
     photo: 'http://oss2014.adm.ntu.edu.sg/marla/wp-content/uploads/sites/20/2014/01/test.jpg',
     description: 'This is test product 2',
     category: '123',
@@ -25,7 +25,7 @@ export const testProducts: Product[] = [
   {
     id: 3,
     price: 102,
-    title: 'Test product 3',
+    name: 'Test product 3',
     photo: 'http://oss2014.adm.ntu.edu.sg/marla/wp-content/uploads/sites/20/2014/01/test.jpg',
     description: 'This is test product 3',
     category: '123',
@@ -33,7 +33,7 @@ export const testProducts: Product[] = [
   {
     id: 4,
     price: 103,
-    title: 'Test product 4',
+    name: 'Test product 4',
     photo: 'http://oss2014.adm.ntu.edu.sg/marla/wp-content/uploads/sites/20/2014/01/test.jpg',
     description: 'This is test product 4',
     category: '123',
@@ -41,7 +41,7 @@ export const testProducts: Product[] = [
   {
     id: 5,
     price: 104,
-    title: 'Test product 5',
+    name: 'Test product 5',
     photo: 'http://oss2014.adm.ntu.edu.sg/marla/wp-content/uploads/sites/20/2014/01/test.jpg',
     description: 'This is test product 5',
     category: '123',
@@ -49,7 +49,7 @@ export const testProducts: Product[] = [
   {
     id: 6,
     price: 105,
-    title: 'Test product 6',
+    name: 'Test product 6',
     photo: 'http://oss2014.adm.ntu.edu.sg/marla/wp-content/uploads/sites/20/2014/01/test.jpg',
     description: 'This is test product 6',
     category: '123',
@@ -57,7 +57,7 @@ export const testProducts: Product[] = [
   {
     id: 7,
     price: 106,
-    title: 'Test product 7',
+    name: 'Test product 7',
     photo: 'http://oss2014.adm.ntu.edu.sg/marla/wp-content/uploads/sites/20/2014/01/test.jpg',
     description: 'This is test product 7',
     category: '123',
@@ -65,7 +65,7 @@ export const testProducts: Product[] = [
   {
     id: 8,
     price: 107,
-    title: 'Test product 8',
+    name: 'Test product 8',
     photo: 'http://oss2014.adm.ntu.edu.sg/marla/wp-content/uploads/sites/20/2014/01/test.jpg',
     description: 'This is test product 8',
     category: '123',
@@ -73,7 +73,7 @@ export const testProducts: Product[] = [
   {
     id: 9,
     price: 108,
-    title: 'Test product 9',
+    name: 'Test product 9',
     photo: 'http://oss2014.adm.ntu.edu.sg/marla/wp-content/uploads/sites/20/2014/01/test.jpg',
     description: 'This is test product 9',
     category: '123',
@@ -81,13 +81,16 @@ export const testProducts: Product[] = [
   {
     id: 10,
     price: 109,
-    title: 'Test product 10',
+    name: 'Test product 10',
     photo: 'http://oss2014.adm.ntu.edu.sg/marla/wp-content/uploads/sites/20/2014/01/test.jpg',
     description: 'This is test product 10',
     category: '123',
   },
 
 ];
+
+export const testProduct: Product = testProducts[0];
+
 
 export const testProductsToBuy: ProductToBuy[] = [
   {product: testProducts[0], amount: 1},

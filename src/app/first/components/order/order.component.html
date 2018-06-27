@@ -4,14 +4,18 @@
       <button mat-flat-button>домой</button>
       <button mat-flat-button>right</button>
 
-    </div>
     <div *ngIf="order">
+      <div class="control-buttons">
+        <button mat-flat-button [routerLink]="['/order', order.id - 1]">left</button>
+        <button mat-flat-button [routerLink]="['/order', order.id + 1]">right</button>
+
+      </div>
       <div class="route">{{order.id}}) {{order.totalPrice()}}руб</div>
       <div class="list">
 
 
         <div class="item" *ngFor="let product of order.products">
-          <div class="title">{{product.product.title}}</div>
+          <div class="title">{{product.product.name}}</div>
           <div class="counter-wrap">
             {{product.amount}}
           </div>

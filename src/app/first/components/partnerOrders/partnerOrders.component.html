@@ -2,15 +2,15 @@
   <div class="row">
     <div class="col-md-3 col-xs-1 col-sm-3"></div>
     <div class="col-md-3 col-xs-5 col-sm-3 text-left"><a class="btn btn-success btn-lg"
-                                                         routerLink="/partnermenu" routerLinkActive="active">Домой</a></div>
+                                                         [routerLink]="['partnermenu']" routerLinkActive="active">Меню</a></div>
     <div class="col-md-3 col-xs-5 col-sm-3 text-right"><a class="btn btn-warning btn-lg">Все на карте</a></div>
     <div class="col-md-3 col-xs-1 col-sm-3"></div>
   </div>
   <div class="row">
     <div class="table-responsive">
       <table class="table" *ngIf="orders">
-        <tr *ngFor="let order of orders">
-          <td><a>{{order.id}}.</a></td>
+        <tr *ngFor="let order of orders" [routerLink]="['/order', order.id]">
+          <td>{{order.id}}.</td>
           <td style="text-align: right">{{order.totalPrice()}} руб</td>
         </tr>
 

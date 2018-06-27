@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Basket} from '../../models/Basket';
 import {BasketService} from '../../services/basket.service';
-import {ActivatedRoute, ParamMap} from '@angular/router';
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {switchMap} from 'rxjs/internal/operators';
 import {ProductToBuy} from '../../models/ProductToBuy';
 
@@ -14,7 +14,8 @@ export class BasketComponent implements OnInit {
 
   basket: Basket;
   constructor(private basketService: BasketService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit() {
     this.route.paramMap.pipe(
@@ -51,5 +52,6 @@ export class BasketComponent implements OnInit {
 
   confirmBasket(): void {
     this.basketService.confirmBasket(this.basket.shop);
+    this.router.navigate(['/menu', this.basket.shop]);
   }
 }

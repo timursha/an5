@@ -16,21 +16,20 @@ export class PartnerMenuComponent implements OnInit{
   store: Store;
 
   constructor(private storeService: StoreService,
-              private route: ActivatedRoute,
               private productService: ProductService) {
 
   }
 
   ngOnInit() {
-    this.route.paramMap.pipe(
-      switchMap((params: ParamMap) => this.storeService.getStore(params.get('id')))
-    ).subscribe((store: Store) => this.store = store);
+    this.storeService.getAdminStore().subscribe((store: Store) => this.store = store);
+
   }
 
   deleteProduct(product: Product) {
     this.store.products.splice(this.store.products.indexOf(product, 0), 1);
     this.productService.deleteProduct(product.id);
   }
+
 
 
 
