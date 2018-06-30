@@ -18,11 +18,12 @@ import {OrderService} from './services/order.service';
 import {RouterModule} from '@angular/router';
 import {ProductFormComponent} from './components/product/productForm/productForm.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
-import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import {ProductEditComponent} from './components/product/product-edit/product-edit.component';
+import {ProductCreateComponent} from './components/product/product-create/product-create.component';
 import {TokenInterceptor} from './services/auth/auth.request';
 import {ErrorInterceptor} from './services/auth/error.request';
 import {AuthService} from './services/auth/auth.service';
+import {LoginComponent} from './components/login/login.component';
 
 
 // import { Foo4Component } from './foo4/foo4.component';
@@ -38,7 +39,8 @@ import {AuthService} from './services/auth/auth.service';
     CounterComponent,
     ProductFormComponent,
     ProductEditComponent,
-    ProductCreateComponent
+    ProductCreateComponent,
+    LoginComponent
   ],
   imports: [
     MatButtonModule,

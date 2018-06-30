@@ -8,6 +8,7 @@ import {OrderComponent} from './first/components/order/order.component';
 import {ProductFormComponent} from './first/components/product/productForm/productForm.component';
 import {ProductEditComponent} from './first/components/product/product-edit/product-edit.component';
 import {ProductCreateComponent} from './first/components/product/product-create/product-create.component';
+import {LoginComponent} from './first/components/login/login.component';
 
 
 // import { Foo4Component } from './first/foo4/foo4.component'
@@ -26,7 +27,9 @@ import {ProductCreateComponent} from './first/components/product/product-create/
         {path: 'partnerOrders', component: PartnerOrdersComponent},
         {path: 'order/:id', component: OrderComponent},
         {path: 'product/edit/:id', component: ProductEditComponent},
-        {path: 'product/create', component: ProductCreateComponent}
+        {path: 'product/create', component: ProductCreateComponent},
+        {path: 'login', component: LoginComponent}
+
 
 
 
