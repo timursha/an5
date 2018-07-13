@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material';
+import {MatButtonModule, MatIconModule, MatToolbarModule} from '@angular/material';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,9 +24,9 @@ import {TokenInterceptor} from './services/auth/auth.request';
 import {ErrorInterceptor} from './services/auth/error.request';
 import {AuthService} from './services/auth/auth.service';
 import {LoginComponent} from './components/login/login.component';
-
-
-// import { Foo4Component } from './foo4/foo4.component';
+import {PartnerAdminComponent} from './components/partnerAdmin/partnerAdmin.component';
+import {ConfirmationComponent} from './components/confirmation/confirmation.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -40,7 +40,13 @@ import {LoginComponent} from './components/login/login.component';
     ProductFormComponent,
     ProductEditComponent,
     ProductCreateComponent,
-    LoginComponent
+    LoginComponent,
+    PartnerAdminComponent,
+    ConfirmationComponent
+
+
+
+
   ],
   imports: [
     MatButtonModule,
@@ -50,7 +56,13 @@ import {LoginComponent} from './components/login/login.component';
     MatGridListModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatIconModule
+
+
+
   ],
   providers: [
     HttpClient,
@@ -65,3 +77,4 @@ import {LoginComponent} from './components/login/login.component';
 })
 
 export class FirstModule {}
+

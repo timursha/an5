@@ -9,6 +9,10 @@ import {StoreService} from './first/services/store.service';
 import {BasketService} from './first/services/basket.service';
 import {ProductService} from './first/services/product.service';
 import {OrderService} from './first/services/order.service';
+import {MatCardModule} from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material';
+
+
 
 
 @NgModule({
@@ -20,7 +24,8 @@ import {OrderService} from './first/services/order.service';
     BrowserModule,
     AppRoutingModule,
     FirstModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
   ],
   providers: [
     HttpClient,
