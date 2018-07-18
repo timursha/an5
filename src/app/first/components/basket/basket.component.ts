@@ -51,7 +51,6 @@ export class BasketComponent implements OnInit {
   }
 
   confirmBasket(): void {
-    this.basketService.confirmBasket(this.basket.shop);
-    this.router.navigate(['/payment', this.basket.shop]);
+    this.basketService.confirmBasket(this.basket.shop).subscribe((id: number) => this.router.navigate(['/payment', id]));
   }
 }

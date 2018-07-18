@@ -26,9 +26,8 @@ export class BasketService {
       .subscribe(value => console.log(value));
   }
 
-  confirmBasket(shop_id: number): void {
-    this.http.get(`api/orders/basket/${shop_id}/confirm/`)
-      .subscribe(value => console.log(value));
+  confirmBasket(shop_id: number): Observable<Number> {
+    return this.http.get<Number>(`api/orders/basket/${shop_id}/confirm/`);
   }
 }
 
