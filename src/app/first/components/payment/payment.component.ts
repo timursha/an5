@@ -22,6 +22,7 @@ export class PaymentComponent implements OnInit {
     ).subscribe((order: Order) => {
       this.order = order;
       console.log(this.order);
+      console.log(this.order.totalPrice());
     });
   }
 
