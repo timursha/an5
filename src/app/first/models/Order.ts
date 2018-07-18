@@ -13,6 +13,7 @@ export class Order {
   id: number;
   created: string;
   delivered: boolean;
+  payed: boolean;
   products: ProductToBuy[];
 
   public totalPrice(): number {

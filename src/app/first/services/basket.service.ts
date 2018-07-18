@@ -21,6 +21,7 @@ export class BasketService {
   }
 
   putInBasket(shop_id: number, product: Product, amount: number): void {
+
     this.http.post(`api/orders/basket/${shop_id}/add/`, {'product_id': product.id, 'amount': amount})
       .subscribe(value => console.log(value));
   }

@@ -11,6 +11,7 @@ import {ProductCreateComponent} from './first/components/product/product-create/
 import {LoginComponent} from './first/components/login/login.component';
 import {PartnerAdminComponent} from './first/components/partnerAdmin/partnerAdmin.component';
 import {ConfirmationComponent} from './first/components/confirmation/confirmation.component';
+import {PaymentComponent} from './first/components/payment/payment.component';
 
 
 
@@ -33,6 +34,7 @@ import {ConfirmationComponent} from './first/components/confirmation/confirmatio
         {path: 'product/create', component: ProductCreateComponent},
         {path: 'login', component: LoginComponent},
         {path: 'partnerAdmin', component: PartnerAdminComponent},
+        {path: 'payment/:id', component: PaymentComponent},
         {path: 'confirmation', component: ConfirmationComponent}
 
 
