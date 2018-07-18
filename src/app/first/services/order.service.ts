@@ -25,5 +25,11 @@ export class OrderService {
       catchError(handleError('getOrder', testOrder))
     );
   }
+
+  getClientOrder(id: string): Observable<Order> {
+    return this.http.get<Order>(`api/orders/client/${id}`).pipe(
+      catchError(handleError('getOrder', testOrder))
+    );
+  }
 }
 
