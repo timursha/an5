@@ -1,48 +1,50 @@
-<form ngNoForm method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
-  <input type="hidden" name="receiver" value="410015902501066">
-  <input type="hidden" name="formcomment" value="Оплата заказа">
-  <input type="hidden" name="short-dest" value="short-dest">
-  <input type="hidden" name="label" [value]="order.id">
-  <input type="hidden" name="quickpay-form" value="donate">
-  <input type="hidden" name="targets" value="Оплата заказа">
-  <input type="hidden" name="sum" [value]="order.totalPrice()" data-type="number">
-  <input type="hidden" name="comment" value="">
-  <input type="hidden" name="need-fio" value="false">
-  <input type="hidden" name="need-email" value="false">
-  <input type="hidden" name="need-phone" value="false">
-  <input type="hidden" name="need-address" value="false">
-  <input type="hidden" name="paymentType" value="AC">
+<div *ngIf="order">
+  <form ngNoForm method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
+    <input type="hidden" name="receiver" value="410015902501066">
+    <input type="hidden" name="formcomment" value="Оплата заказа">
+    <input type="hidden" name="short-dest" value="short-dest">
+    <input type="hidden" name="label" [value]="order.id">
+    <input type="hidden" name="quickpay-form" value="donate">
+    <input type="hidden" name="targets" value="Оплата заказа">
+    <input type="hidden" name="sum" [value]="order.totalPrice()" data-type="number">
+    <input type="hidden" name="comment" value="">
+    <input type="hidden" name="need-fio" value="false">
+    <input type="hidden" name="need-email" value="false">
+    <input type="hidden" name="need-phone" value="false">
+    <input type="hidden" name="need-address" value="false">
+    <input type="hidden" name="paymentType" value="AC">
 
-  <div class="t588__buttons">
-    <div class="t588__buttons-wrapper t-margin_auto">
-      <input type="submit" value="Оплатить картой">
+    <div class="t588__buttons">
+      <div class="t588__buttons-wrapper t-margin_auto">
+        <input type="submit" value="Оплатить картой">
 
+      </div>
     </div>
-  </div>
-</form>
+  </form>
 
-<form ngNoForm method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
-  <input type="hidden" name="receiver" value="410015902501066">
-  <input type="hidden" name="formcomment" value="Оплата заказа">
-  <input type="hidden" name="short-dest" value="short-dest">
-  <input type="hidden" name="label" [value]="order.id">
-  <input type="hidden" name="quickpay-form" value="donate">
-  <input type="hidden" name="targets" value="Оплата заказа">
-  <input type="hidden" name="sum" [value]="order.totalPrice()" data-type="number">
-  <input type="hidden" name="comment" value="">
-  <input type="hidden" name="need-fio" value="false">
-  <input type="hidden" name="need-email" value="false">
-  <input type="hidden" name="need-phone" value="false">
-  <input type="hidden" name="need-address" value="false">
-  <input type="hidden" name="paymentType" value="PC">
+  <form ngNoForm method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
+    <input type="hidden" name="receiver" value="410015902501066">
+    <input type="hidden" name="formcomment" value="Оплата заказа">
+    <input type="hidden" name="short-dest" value="short-dest">
+    <input type="hidden" name="label" [value]="order.id">
+    <input type="hidden" name="quickpay-form" value="donate">
+    <input type="hidden" name="targets" value="Оплата заказа">
+    <input type="hidden" name="sum" [value]="order.totalPrice()" data-type="number">
+    <input type="hidden" name="comment" value="">
+    <input type="hidden" name="need-fio" value="false">
+    <input type="hidden" name="need-email" value="false">
+    <input type="hidden" name="need-phone" value="false">
+    <input type="hidden" name="need-address" value="false">
+    <input type="hidden" name="paymentType" value="PC">
 
-  <div class="t588__buttons">
-    <div class="t588__buttons-wrapper t-margin_auto">
-      <input type="submit" value="Оплатить Яндекс Деньгами">
+    <div class="t588__buttons">
+      <div class="t588__buttons-wrapper t-margin_auto">
+        <input type="submit" value="Оплатить Яндекс Деньгами">
 
+      </div>
     </div>
-  </div>
-</form>
+  </form>
+</div>
 
 
 
