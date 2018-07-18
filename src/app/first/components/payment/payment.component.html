@@ -29,7 +29,7 @@
     <input type="hidden" name="label" [value]="order.id">
     <input type="hidden" name="quickpay-form" value="donate">
     <input type="hidden" name="targets" value="Оплата заказа">
-    <input type="hidden" name="sum" [value]="order.totalPrice" data-type="number">
+    <input type="hidden" name="sum" [value]="order.totalPrice()" data-type="number">
     <input type="hidden" name="comment" value="">
     <input type="hidden" name="need-fio" value="false">
     <input type="hidden" name="need-email" value="false">

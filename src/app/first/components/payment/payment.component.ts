@@ -19,7 +19,10 @@ export class PaymentComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.pipe(
       switchMap((params: ParamMap) => this.orderService.getClientOrder(params.get('id')))
-    ).subscribe((order: Order) => this.order = order);
+    ).subscribe((order: Order) => {
+      this.order = order;
+      console.log(this.order);
+    });
   }
 
 }
