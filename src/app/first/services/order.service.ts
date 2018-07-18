@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Order} from '../models/Order';
 import {testOrder, testOrders} from '../../devSets/testSets';
-import {catchError} from 'rxjs/internal/operators';
+import {catchError, map} from 'rxjs/internal/operators';
 import {handleError} from './utils';
 
 @Injectable({
@@ -28,6 +28,7 @@ export class OrderService {
 
   getClientOrder(id: string): Observable<any> {
     return this.http.get(`api/orders/client/${id}`).pipe(
+      map((plain: any) => new Order(plain.id, plain.created, plain.delivered, plain.products)),
       catchError(handleError('getOrder', testOrder))
     );
   }
