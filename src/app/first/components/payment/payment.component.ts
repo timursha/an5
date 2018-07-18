@@ -21,6 +21,7 @@ export class PaymentComponent implements OnInit {
       switchMap((params: ParamMap) => this.orderService.getClientOrder(params.get('id')))
     ).subscribe(order => {
       this.order = order as Order;
+      console.log(typeof order)
       console.log(this.order);
       console.log(this.order.totalPrice());
     });
