@@ -12,6 +12,8 @@ import {LoginComponent} from './first/components/login/login.component';
 import {PartnerAdminComponent} from './first/components/partnerAdmin/partnerAdmin.component';
 import {ConfirmationComponent} from './first/components/confirmation/confirmation.component';
 import {PaymentComponent} from './first/components/payment/payment.component';
+import {MapComponent} from './first/components/map/map.component';
+import {NavigationComponent} from './first/components/navigation/navigation.component';
 
 
 
@@ -35,6 +37,10 @@ import {PaymentComponent} from './first/components/payment/payment.component';
         {path: 'login', component: LoginComponent},
         {path: 'partnerAdmin', component: PartnerAdminComponent},
         {path: 'payment/:id', component: PaymentComponent},
+        {path: 'map', component: MapComponent},
+        {path: 'navigation', component: NavigationComponent},
+
+
         {path: 'confirmation', component: ConfirmationComponent}
 
 

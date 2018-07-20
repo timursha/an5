@@ -28,6 +28,8 @@ import {PartnerAdminComponent} from './components/partnerAdmin/partnerAdmin.comp
 import {ConfirmationComponent} from './components/confirmation/confirmation.component';
 import {MatCardModule} from '@angular/material/card';
 import { PaymentComponent } from './components/payment/payment.component';
+import { MapComponent } from './components/map/map.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { PaymentComponent } from './components/payment/payment.component';
     LoginComponent,
     PartnerAdminComponent,
     ConfirmationComponent,
-    PaymentComponent
+    PaymentComponent,
+    MapComponent,
+    NavigationComponent
 
 
 
