@@ -28,7 +28,7 @@ export class OrderService {
 
   getClientOrder(id: string): Observable<any> {
     return this.http.get(`api/orders/client/${id}`).pipe(
-      map((plain: any) => new Order(plain.id, plain.created, plain.delivered, plain.products)),
+      map((plain: any) => new Order(plain.id, plain.shop_id, plain.created, plain.delivered, plain.payed, plain.products)),
       catchError(handleError('getOrder', testOrder))
     );
   }

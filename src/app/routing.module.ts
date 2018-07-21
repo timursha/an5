@@ -38,7 +38,7 @@ import {NavigationComponent} from './first/components/navigation/navigation.comp
         {path: 'partnerAdmin', component: PartnerAdminComponent},
         {path: 'payment/:id', component: PaymentComponent},
         {path: 'map', component: MapComponent},
-        {path: 'navigation', component: NavigationComponent},
+        {path: 'navigation/:id', component: NavigationComponent},
 
 
         {path: 'confirmation', component: ConfirmationComponent}

@@ -3,16 +3,19 @@ import {ProductToBuy} from './ProductToBuy';
 export class Order {
 
 
-  constructor(id: number, created: string, delivered: boolean, products: ProductToBuy[]) {
+  constructor(id: number, shop_id: number, created: string, delivered: boolean, payed: boolean, products: ProductToBuy[]) {
     this.id = id;
+    this.shop_id = shop_id;
     this.created = created;
     this.delivered = delivered;
+    this.payed = payed;
     this.products = products;
   }
 
 
 
   id: number;
+  shop_id: number;
   created: string;
   delivered: boolean;
   payed: boolean;

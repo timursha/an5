@@ -111,20 +111,20 @@ export const testBasket: Basket = {
 
 
 export const testOrders: Order[] = [
-  new Order(1, '12:11', false, testProductsToBuy),
-  new Order(2, '12:13', false, testProductsToBuy),
-  new Order(3, '12:20', false, testProductsToBuy),
-  new Order(4, '12:19', false, testProductsToBuy),
-  new Order(5, '12:15', false, testProductsToBuy),
-  new Order(6, '12:10', false, testProductsToBuy),
-  new Order(7, '12:21', false, testProductsToBuy),
-  new Order(8, '12:25', false, testProductsToBuy),
-  new Order(9, '12:30', false, testProductsToBuy),
+  new Order(1, 1, '12:11', false, false, testProductsToBuy),
+  new Order(2, 1, '12:13', false, false, testProductsToBuy),
+  new Order(3, 1, '12:20', false, false, testProductsToBuy),
+  new Order(4, 1, '12:19', false, false, testProductsToBuy),
+  new Order(5, 1, '12:15', false, false, testProductsToBuy),
+  new Order(6, 2, '12:10', false, false, testProductsToBuy),
+  new Order(7, 2, '12:21', false, false, testProductsToBuy),
+  new Order(8, 2, '12:25', false, false, testProductsToBuy),
+  new Order(9, 2, '12:30', false, false, testProductsToBuy),
 ];
 
-export const testOrder: Order = new Order(1, '12:21', false, testProductsToBuy);
+export const testOrder: Order =   new Order(3, 1, '12:20', false, false, testProductsToBuy);
 
-export const testStore: Store = {
+  export const testStore: Store = {
   id: 1,
   title: 'Test store',
   description: 'Test description',
