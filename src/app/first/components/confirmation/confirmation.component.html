@@ -11,7 +11,6 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>навигация</button>
-    <button mat-button>назад</button>
+    <button mat-button  [routerLink]="['/navigation', this.id]">Навигация</button>
   </mat-card-actions>
 </mat-card>
