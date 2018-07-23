@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, ParamMap} from '@angular/router';
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {switchMap} from 'rxjs/internal/operators';
 import {Order} from '../../models/Order';
 import {OrderService} from '../../services/order.service';
@@ -13,7 +13,8 @@ export class PaymentComponent implements OnInit {
   order: Order;
 
   constructor(private route: ActivatedRoute,
-              private orderService: OrderService,) { }
+              private orderService: OrderService,
+              private router: Router) { }
 
 
   ngOnInit() {
@@ -21,9 +22,9 @@ export class PaymentComponent implements OnInit {
       switchMap((params: ParamMap) => this.orderService.getClientOrder(params.get('id')))
     ).subscribe((order: Order) => {
       this.order = <Order> order;
-      console.log(typeof order);
-      console.log(this.order);
-      console.log(this.order.totalPrice());
+      if (order.payed) {
+        this.router.navigate(['/confirmation', order.id]);
+      }
     });
   }
 

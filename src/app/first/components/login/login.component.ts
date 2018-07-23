@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
 
-  login():void {
+  login(): void {
     this.authService.login(this.user);
   }
 
