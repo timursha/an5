@@ -41,7 +41,7 @@ import {NavigationComponent} from './first/components/navigation/navigation.comp
         {path: 'navigation/:id', component: NavigationComponent},
 
 
-        {path: 'confirmation', component: ConfirmationComponent}
+        {path: 'confirmation/:id', component: ConfirmationComponent}
 
 
 
