@@ -15,10 +15,9 @@ export class ConfirmationComponent implements OnInit {
   id: string;
 
   ngOnInit(): void {
-    this.route.paramMap.pipe(
-      switchMap((params: ParamMap) => this.id = params.get('id')
-      )
-    );
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      this.id = params.get('id');
+    });
   }
 
 }
