@@ -22,6 +22,7 @@ export class PaymentComponent implements OnInit {
       switchMap((params: ParamMap) => this.orderService.getClientOrder(params.get('id')))
     ).subscribe((order: Order) => {
       this.order = <Order> order;
+      console.log(order.payed);
       if (order.payed) {
         this.router.navigate(['/confirmation', order.id]);
       }
