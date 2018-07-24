@@ -15,7 +15,7 @@ export class OrderService {
   }
 
   getAvailableOrders(): Observable<Order[]> {
-    return this.http.get<Order[]>('api/orders').pipe(
+    return this.http.get<Order[]>('api/orders/shop/').pipe(
       catchError(handleError('getBasket', testOrders))
     );
   }
