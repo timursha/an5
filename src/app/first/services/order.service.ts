@@ -34,5 +34,9 @@ export class OrderService {
       catchError(handleError('getOrder', testOrder))
     );
   }
+
+  deliverOrder(id: string): void {
+    this.http.get<Order>(`api/orders/shop/${id}/deliver`).subscribe(res => console.log(res));
+  }
 }
 

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Order} from '../../models/Order';
 import {OrderService} from '../../services/order.service';
-import {ActivatedRoute, ParamMap} from '@angular/router';
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {switchMap} from 'rxjs/internal/operators';
 
 @Component({
@@ -13,7 +13,8 @@ export class OrderComponent implements OnInit {
   order: Order;
 
   constructor(private orderService: OrderService,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute,
+              private router: Router) {
 
   }
 
@@ -24,5 +25,9 @@ export class OrderComponent implements OnInit {
     ).subscribe((order: Order) => this.order = order);
   }
 
+  deliver(): void{
+    this.orderService.deliverOrder(String(this.order.id));
+    this.router.navigate(['/partnerOrders']);
+  }
 
 }
