@@ -4,8 +4,8 @@ import {ProductToBuy} from '../models/ProductToBuy';
 
 export function handleError<T> (operation = 'operation', result?: T) {
   return (error: any): Observable<T> => {
-
-    console.error(error); // log to console instead
+    console.log(result);
+    // console.error(error); // log to console instead
     return of(result as T);
   };
 }
@@ -21,6 +21,7 @@ export function loadScript (scriptSource: string, objectName: string): Observabl
     document.getElementsByTagName('head')[0].appendChild(node);
 
     node.onload = () => {
+      console.log('loaded');
       observer.next(window[objectName]);
     };
   });

@@ -30,6 +30,7 @@ import {MatCardModule} from '@angular/material/card';
 import { PaymentComponent } from './components/payment/payment.component';
 import { MapComponent } from './components/map/map.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { TestYandexComponent } from '../test-yandex/test-yandex.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     ConfirmationComponent,
     PaymentComponent,
     MapComponent,
-    NavigationComponent
+    NavigationComponent,
+    TestYandexComponent
 
 
 

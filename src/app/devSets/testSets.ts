@@ -20,7 +20,7 @@ export const testProducts: Product[] = [
     name: 'Test product 2',
     photo: 'http://oss2014.adm.ntu.edu.sg/marla/wp-content/uploads/sites/20/2014/01/test.jpg',
     description: 'This is test product 2',
-    category: '123',
+    category: '1234',
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ export const testProducts: Product[] = [
     name: 'Test product 4',
     photo: 'http://oss2014.adm.ntu.edu.sg/marla/wp-content/uploads/sites/20/2014/01/test.jpg',
     description: 'This is test product 4',
-    category: '123',
+    category: '1235',
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ export const testProducts: Product[] = [
     name: 'Test product 6',
     photo: 'http://oss2014.adm.ntu.edu.sg/marla/wp-content/uploads/sites/20/2014/01/test.jpg',
     description: 'This is test product 6',
-    category: '123',
+    category: '1273',
   },
   {
     id: 7,
@@ -84,7 +84,7 @@ export const testProducts: Product[] = [
     name: 'Test product 10',
     photo: 'http://oss2014.adm.ntu.edu.sg/marla/wp-content/uploads/sites/20/2014/01/test.jpg',
     description: 'This is test product 10',
-    category: '123',
+    category: '1223',
   },
 
 ];
@@ -124,7 +124,7 @@ export const testOrders: Order[] = [
 
 export const testOrder: Order =   new Order(3, 1, '12:20', false, false, testProductsToBuy);
 
-  export const testStore: Store = {
+export const testStore: Store = {
   id: 1,
   title: 'Test store',
   description: 'Test description',
@@ -132,6 +132,49 @@ export const testOrder: Order =   new Order(3, 1, '12:20', false, false, testPro
   longitude: 37,
   products: testProducts,
 };
+
+export const testStores: Store[] = [
+  {
+    id: 1,
+    title: 'Test store',
+    description: 'Test description',
+    latitude: 57,
+    longitude: 37,
+    products: testProducts,
+  },
+  {
+    id: 2,
+    title: 'Test store',
+    description: 'Test description',
+    latitude: 58,
+    longitude: 38,
+    products: testProducts,
+  },
+  {
+    id: 3,
+    title: 'Test store',
+    description: 'Test description',
+    latitude: 59,
+    longitude: 39,
+    products: testProducts,
+  },
+  {
+    id: 4,
+    title: 'Test store',
+    description: 'Test description',
+    latitude: 60,
+    longitude: 40,
+    products: testProducts,
+  },
+  {
+    id: 5,
+    title: 'Test store',
+    description: 'Test description',
+    latitude: 61,
+    longitude: 41,
+    products: testProducts,
+  }
+];
 
 // export const testOrder: Order =  {
 //   id: 1,

@@ -65,15 +65,6 @@ export class NavigationComponent implements OnInit {
     });
 
 
-
-
-
-  }
-
-
-  init(): void {
-
-
   }
 
 }

@@ -14,6 +14,7 @@ import {ConfirmationComponent} from './first/components/confirmation/confirmatio
 import {PaymentComponent} from './first/components/payment/payment.component';
 import {MapComponent} from './first/components/map/map.component';
 import {NavigationComponent} from './first/components/navigation/navigation.component';
+import {TestYandexComponent} from './test-yandex/test-yandex.component';
 
 
 
@@ -39,7 +40,7 @@ import {NavigationComponent} from './first/components/navigation/navigation.comp
         {path: 'payment/:id', component: PaymentComponent},
         {path: 'map', component: MapComponent},
         {path: 'navigation/:id', component: NavigationComponent},
-
+        {path: 'test', component: TestYandexComponent},
 
         {path: 'confirmation/:id', component: ConfirmationComponent}
 
