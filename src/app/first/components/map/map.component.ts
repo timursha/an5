@@ -100,7 +100,7 @@ export class MapComponent implements OnInit {
     const newPlacemark = new this.ymaps.Placemark([shop.latitude, shop.longitude], {
       // Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
       balloonContentHeader: shop.title,
-      balloonContentBody: shop.description + ` <a href="/shop/${shop.id}">SHOP</a>`,
+      balloonContentBody: shop.description + ` <a href="/menu/${shop.id}">SHOP</a>`,
       balloonContentFooter: this.getCategories(shop),
       hintContent: shop.title
     });
