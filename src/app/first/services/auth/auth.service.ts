@@ -19,8 +19,8 @@ export class AuthService {
 
   public login(user: User): void {
     this.httpClient.post<{'token': string}>('api/api-token-auth/', {'username': user.username, 'password': user.password})
-      .subscribe(data => {
-        console.log(data);
+      .subscribe((data: any) => {
+        console.log(data.message);
         localStorage.setItem('token', data.token);
         this.location.back();
       });

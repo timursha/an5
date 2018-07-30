@@ -5,7 +5,6 @@ import { PartnerOrdersComponent } from './first/components/partnerOrders/partner
 import { BasketComponent } from './first/components/basket/basket.component';
 import {PartnerMenuComponent} from './first/components/partnermenu/partnermenu.component';
 import {OrderComponent} from './first/components/order/order.component';
-import {ProductFormComponent} from './first/components/product/productForm/productForm.component';
 import {ProductEditComponent} from './first/components/product/product-edit/product-edit.component';
 import {ProductCreateComponent} from './first/components/product/product-create/product-create.component';
 import {LoginComponent} from './first/components/login/login.component';
@@ -14,7 +13,6 @@ import {ConfirmationComponent} from './first/components/confirmation/confirmatio
 import {PaymentComponent} from './first/components/payment/payment.component';
 import {MapComponent} from './first/components/map/map.component';
 import {NavigationComponent} from './first/components/navigation/navigation.component';
-import {TestYandexComponent} from './test-yandex/test-yandex.component';
 
 
 
@@ -40,7 +38,6 @@ import {TestYandexComponent} from './test-yandex/test-yandex.component';
         {path: 'payment/:id', component: PaymentComponent},
         {path: 'map', component: MapComponent},
         {path: 'navigation/:id', component: NavigationComponent},
-        {path: 'test', component: TestYandexComponent},
 
         {path: 'confirmation/:id', component: ConfirmationComponent}
 

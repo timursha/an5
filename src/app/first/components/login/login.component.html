@@ -1,7 +1,38 @@
-<form class="form-group">
-  <label>Username: <input class="input-group" [(ngModel)]="user.username" name="username" type="text"></label>
-  <label>Username: <input class="input-group" [(ngModel)]="user.password" name="password" type="password"></label>
+<!--<form class="form-group">-->
+  <!--<label>Username: <input class="input-group" [(ngModel)]="user.username" name="username" type="text"></label>-->
+  <!--<label>Username: <input class="input-group" [(ngModel)]="user.password" name="password" type="password"></label>-->
 
-  <button (click)="login()"></button>
+  <!--<button (click)="login()"></button>-->
 
-</form>
+<!--</form>-->
+<div class="container">
+  <h1 class="form-heading">login Form</h1>
+  <div class="login-form">
+    <div class="main-div">
+      <div class="panel">
+        <h2>Admin Login</h2>
+        <p>Please enter your email and password</p>
+      </div>
+      <form id="Login">
+
+        <div class="form-group">
+
+          <input class="form-control" id="inputEmail" placeholder="Username" [(ngModel)]="user.username" name="username" type="text">
+          {{user.username}}
+        </div>
+
+        <div class="form-group has-error">
+          <input class="form-control " id="inputPassword" [(ngModel)]="user.password" name="password" type="password" placeholder="Password">
+
+        </div>
+
+
+        <div class="forgot">
+          <a href="reset.html">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+
+      </form>
+    </div>
+    <p class="botto-text"> Designed by Sunil Rajpu| Used by Gerasimov Valeriy</p>
+  </div></div>

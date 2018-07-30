@@ -5,7 +5,7 @@ import {User} from '../../models/User';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.less']
 })
 export class LoginComponent implements OnInit {
   user: User;
@@ -19,8 +19,9 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit() {
-    this.user = new User;
-    this.user.username = this.user.password = '12345';
+    console.log(this.user);
+    this.user = new User();
+    console.log(this.user);
   }
 
 }
