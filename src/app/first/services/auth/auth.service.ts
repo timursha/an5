@@ -3,6 +3,8 @@ import {User} from '../../models/User';
 import {HttpClient} from '@angular/common/http';
 import {Location} from '@angular/common';
 import {Router} from '@angular/router';
+import {catchError} from 'rxjs/internal/operators';
+import {Observable, of} from 'rxjs';
 
 @Injectable()
 export class AuthService {
@@ -18,11 +20,18 @@ export class AuthService {
   }
 
   public login(user: User): void {
-    this.httpClient.post<{'token': string}>('api/api-token-auth/', {'username': user.username, 'password': user.password})
+    this.httpClient.post<{'token': string}>('api/api-token-auth/', {'username': user.username, 'password': user.password}).pipe(
+      catchError(err => {
+        console.log(err);
+        return of(err);
+      })
+    )
       .subscribe((data: any) => {
         console.log(data.message);
-        localStorage.setItem('token', data.token);
-        this.location.back();
+        if (data.status === 200 || data.status === 201) {
+          localStorage.setItem('token', data.token);
+          this.location.back();
+        }
       });
 
   }
