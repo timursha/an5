@@ -21,8 +21,9 @@ export class LoginComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   login(): void {
-    const res$ = this.authService.login(this.user);
-    console.log(res$);
+    const res$ = this.authService.login({username: this.loginForm.get('username').value,
+                                              password: this.loginForm.get('password').value});
+    console.log(this.user);
     res$.subscribe( data => {
       console.log(data);
       if (data) {
