@@ -13,7 +13,9 @@ export class LoginComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   login(): void {
-    this.authService.login(this.user).subscribe( data => console.log(data));
+    const res$ = this.authService.login(this.user);
+    console.log(res$);
+    res$.subscribe( data => console.log(data));
   }
 
 
