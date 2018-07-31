@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   login(): void {
-    this.authService.login(this.user).subscribe( data => console.log(data));
+    this.authService.login(this.user).subscribe( data => console.log(`This is in component ${data}`));
   }
 
 

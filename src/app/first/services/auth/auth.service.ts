@@ -22,7 +22,7 @@ export class AuthService {
   public login(user: User): Observable<any> {
     return this.httpClient.post<any>('api/api-token-auth/', {'username': user.username, 'password': user.password}).pipe(
       map((data: any) => {
-          console.log(data.error);
+          console.log(`This is service data ${data}`);
           if (data.status === 200 || data.status === 201) {
             localStorage.setItem('token', data.token);
             this.location.back();
@@ -36,7 +36,7 @@ export class AuthService {
 
         }),
       catchError(err => {
-        console.log(err);
+        console.log(`This is error ${err}`);
         return of(err);
       })
     );
