@@ -12,17 +12,34 @@
       <div class="panel">
         <h2>Admin Login</h2>
         <p>Please enter your email and password</p>
+        <p *ngIf="wrongPass" class="alert alert-danger">Your username|password pair is invalid. Try one more time. Pay attention that both fields are case sensetive.</p>
+        <p *ngIf="success" id="successMessage">You have been successfully logged in</p>
       </div>
-      <form id="Login">
+      <form id="Login" [formGroup]="loginForm" #formDir="ngForm">
 
         <div class="form-group">
 
-          <input class="form-control" id="inputEmail" placeholder="Username" [(ngModel)]="user.username" name="username" type="text" required>
+          <input class="form-control" id="inputEmail" placeholder="Username" formControlName="username" name="username" type="text" required>
           {{user.username}}
+
+          <div *ngIf="username.invalid && (username.dirty || username.touched)"
+               class="alert alert-danger">
+
+            <div *ngIf="username.errors.required">
+              username is required.
+            </div>
+            <div *ngIf="username.errors.minlength">
+              username must be at least 3 characters long.
+            </div>
+            <div *ngIf="username.errors">
+              {{username.errors}}
+            </div>
+
+          </div>
         </div>
 
-        <div class="form-group has-error">
-          <input class="form-control " id="inputPassword" [(ngModel)]="user.password" name="password" type="password" placeholder="Password" required>
+        <div class="form-group">
+          <input class="form-control" id="inputPassword" formControlName="password" name="password" type="password" placeholder="Password" required>
 
         </div>
 
@@ -30,7 +47,8 @@
         <div class="forgot">
           <a href="reset.html">Forgot password?</a>
         </div>
-        <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+        <button type="submit" class="btn btn-primary" (click)="login()"
+                [disabled]="loginForm.invalid">Login</button>
 
       </form>
     </div>
