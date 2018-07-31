@@ -27,7 +27,7 @@ export class AuthService {
       })
     )
       .subscribe((data: any) => {
-        console.log(data.message);
+        console.log(data.error);
         if (data.status === 200 || data.status === 201) {
           localStorage.setItem('token', data.token);
           this.location.back();
