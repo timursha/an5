@@ -32,13 +32,13 @@ export class AuthService {
         if (data.status === 200 || data.status === 201) {
           localStorage.setItem('token', data.token);
           this.location.back();
-          return of(null);
+          return null;
         } else {
           if (data.status === 400) {
-            return of(data.error);
+            return data.error;
           }
         }
-        return of(null);
+        return null;
 
       })
     );
