@@ -3,7 +3,7 @@ import {User} from '../../models/User';
 import {HttpClient} from '@angular/common/http';
 import {Location} from '@angular/common';
 import {Router} from '@angular/router';
-import {catchError} from 'rxjs/internal/operators';
+import {catchError, map} from 'rxjs/internal/operators';
 import {Observable, of} from 'rxjs';
 
 @Injectable()
@@ -19,20 +19,28 @@ export class AuthService {
     return localStorage.getItem('token');
   }
 
-  public login(user: User): void {
-    this.httpClient.post<{'token': string}>('api/api-token-auth/', {'username': user.username, 'password': user.password}).pipe(
+  public login(user: User): Observable<any> {
+    return this.httpClient.post<any>('api/api-token-auth/', {'username': user.username, 'password': user.password}).pipe(
+      map((data: any) => {
+          console.log(data.error);
+          if (data.status === 200 || data.status === 201) {
+            localStorage.setItem('token', data.token);
+            this.location.back();
+            return of(null);
+          } else {
+            if (data.status === 400) {
+              return of(data.error);
+            }
+          }
+          return of(null);
+
+        }),
       catchError(err => {
         console.log(err);
         return of(err);
       })
-    )
-      .subscribe((data: any) => {
-        console.log(data.error);
-        if (data.status === 200 || data.status === 201) {
-          localStorage.setItem('token', data.token);
-          this.location.back();
-        }
-      });
+    );
+
 
   }
 
