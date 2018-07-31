@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
         if (data.password) {
           this.passwordMessage = data.password[0];
         }
-        if (data.non_field_error) {
+        if (data.non_field_errors) {
           this.wrongPass = true;
         }
       } else {
