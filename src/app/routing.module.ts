@@ -1,25 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MenuComponent } from './first/components/menu/menu.component';
-import { PartnerOrdersComponent } from './first/components/partnerOrders/partnerOrders.component';
-import { BasketComponent } from './first/components/basket/basket.component';
-import {PartnerMenuComponent} from './first/components/partnermenu/partnermenu.component';
-import {OrderComponent} from './first/components/order/order.component';
-import {ProductEditComponent} from './first/components/product/product-edit/product-edit.component';
-import {ProductCreateComponent} from './first/components/product/product-create/product-create.component';
-import {LoginComponent} from './first/components/login/login.component';
-import {PartnerAdminComponent} from './first/components/partnerAdmin/partnerAdmin.component';
-import {ConfirmationComponent} from './first/components/confirmation/confirmation.component';
-import {PaymentComponent} from './first/components/payment/payment.component';
-import {MapComponent} from './first/components/map/map.component';
-import {NavigationComponent} from './first/components/navigation/navigation.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { BasketComponent } from './components/basket/basket.component';
+import {OrderComponent} from './partner/components/order/order.component';
+import {ProductEditComponent} from './components/product/product-edit/product-edit.component';
+import {ProductCreateComponent} from './components/product/product-create/product-create.component';
+import {LoginComponent} from './components/login/login.component';
+import {ConfirmationComponent} from './components/confirmation/confirmation.component';
+import {PaymentComponent} from './components/payment/payment.component';
+import {MapComponent} from './components/map/map.component';
+import {NavigationComponent} from './components/navigation/navigation.component';
+import {partnerRouters} from './partner/partner.routing';
+import {AdminLayoutComponent} from './partner/layout/admin-layout/admin-layout.component';
 
 
 
-// import { Foo4Component } from './first/foo4/foo4.component'
+// import { Foo4Component } from './foo4/foo4.component'
 
 
-// import { Foo2Component } from './first/menu/menu.component'
+// import { Foo2Component } from './menu/menu.component'
 
 @NgModule({
   imports: [
@@ -28,20 +27,16 @@ import {NavigationComponent} from './first/components/navigation/navigation.comp
         {path: 'menu/:id', component: MenuComponent},
 
         {path: 'basket/:id', component: BasketComponent},
-        {path: 'partnermenu', component: PartnerMenuComponent},
-        {path: 'partnerOrders', component: PartnerOrdersComponent},
-        {path: 'order/:id', component: OrderComponent},
         {path: 'product/edit/:id', component: ProductEditComponent},
         {path: 'product/create', component: ProductCreateComponent},
         {path: 'login', component: LoginComponent},
-        {path: 'partnerAdmin', component: PartnerAdminComponent},
         {path: 'payment/:id', component: PaymentComponent},
         {path: 'map', component: MapComponent},
         {path: 'navigation/:id', component: NavigationComponent},
 
-        {path: 'confirmation/:id', component: ConfirmationComponent}
+        {path: 'confirmation/:id', component: ConfirmationComponent},
 
-
+        {path: 'partner', component: AdminLayoutComponent, children: partnerRouters}
 
 
 

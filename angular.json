@@ -10,7 +10,7 @@
       "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
-          "styleext": "less"
+          "styleext": "scss"
         }
       },
       "architect": {
@@ -27,8 +27,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/sass/styles.scss",
+              "src/assets/font-awesome.css",
+              "src/assets/themify-icons.css"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "~/sass"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

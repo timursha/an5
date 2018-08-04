@@ -1,8 +1,8 @@
-import {Product} from '../first/models/Product';
-import {ProductToBuy} from '../first/models/ProductToBuy';
-import {Basket} from '../first/models/Basket';
-import {Store} from '../first/models/Store';
-import {Order} from '../first/models/Order';
+import {Product} from '../models/Product';
+import {ProductToBuy} from '../models/ProductToBuy';
+import {Basket} from '../models/Basket';
+import {Store} from '../models/Store';
+import {Order} from '../models/Order';
 
 
 export const testProducts: Product[] = [

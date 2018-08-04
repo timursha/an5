@@ -1,0 +1,30 @@
+// ---------------------------------------------------------
+// @TOC
+// ---------------------------------------------------------
+
+// + @Page Container
+// + @Main Content
+// + @Full Container
+// + @Collapsed State
+
+// ---------------------------------------------------------
+// @Page Container
+// ---------------------------------------------------------
+@import "~src/sass/settings/baseColors";
+@import "~src/sass/tools/mixins/mediaQueriesRanges";
+@import "~src/sass/tools/mixins/clearfix";
+@import "~src/sass/settings/breakpoints";
+
+.page-container {
+  min-height: 100vh;
+  padding-left: $offscreen-size;
+  transition: all 0.2s ease;
+
+  @include between($breakpoint-md, $breakpoint-xl) {
+    padding-left: $collapsed-size;
+  }
+
+  @include to($breakpoint-md) {
+    padding-left: 0;
+  }
+}
