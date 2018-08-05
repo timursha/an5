@@ -36,7 +36,8 @@ import {AdminLayoutComponent} from './partner/layout/admin-layout/admin-layout.c
 
         {path: 'confirmation/:id', component: ConfirmationComponent},
 
-        {path: 'partner', component: AdminLayoutComponent, children: partnerRouters}
+        {path: 'partner', component: AdminLayoutComponent, children: partnerRouters},
+        {path: '', redirectTo: 'map', pathMatch: 'full'}
 
 
 
