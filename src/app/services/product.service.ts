@@ -29,6 +29,6 @@ export class ProductService {
   }
 
   createProduct(product: Product): void {
-    this.http.post('api/map/product', product).subscribe(res => console.log(res));
+    this.http.post('api/map/admin/product/', product).subscribe(res => console.log(res));
   }
 }
