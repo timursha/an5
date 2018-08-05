@@ -27,10 +27,8 @@ export class AuthService {
         return of(err);
       }),
       map((data: any) => {
-        console.log(`This is service data`);
-        console.log(data);
-        if (data.status === 200 || data.status === 201) {
-          console.log(data.token);
+
+        if (data.token) {
           localStorage.setItem('token', data.token);
           this.location.back();
           return null;
