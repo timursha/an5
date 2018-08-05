@@ -26,7 +26,7 @@ export class ProductEditComponent implements OnInit {
 
   onSubmit(product: Product): void {
     this.productService.editProduct(product);
-    this.router.navigate(['/partnermenu']);
+    this.router.navigate(['/partner/menu']);
   }
 
 }

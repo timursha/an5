@@ -44,7 +44,6 @@ export class ProductFormComponent implements OnInit {
   get category() { return this.productForm.get('category'); }
 
   submitForm(): void {
-    console.log(this.product);
     if (this.productForm.valid) {
       this.submit.emit({id: this.product.id,
       name: this.productForm.get('name').value,
