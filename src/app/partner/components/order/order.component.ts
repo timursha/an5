@@ -27,7 +27,7 @@ export class OrderComponent implements OnInit {
 
   deliver(): void {
     this.orderService.deliverOrder(String(this.order.id));
-    this.router.navigate(['/partnerOrders']);
+    this.router.navigate(['/partner/orders']);
   }
 
 }

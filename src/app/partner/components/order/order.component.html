@@ -2,11 +2,11 @@
   <div class="container">
 
     <div *ngIf="order">
-      <div class="control-buttons">
-        <button mat-flat-button [routerLink]="['/order', order.id - 1]">left</button>
-        <button mat-flat-button [routerLink]="['/order', order.id + 1]">right</button>
-
-      </div>
+      <!--<div class="control-buttons">-->
+        <!--<button mat-flat-button [routerLink]="['/order', order.id - 1]">left</button>-->
+        <!--<button mat-flat-button [routerLink]="['/order', order.id + 1]">right</button>-->
+<!---->
+      <!--</div>-->
       <div class="route">{{order.id}}) {{order.totalPrice()}}руб</div>
       <div class="list">
 
