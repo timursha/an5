@@ -26,7 +26,7 @@ export class ProductService {
 
   editProduct(product: any): void {
     console.log(product);
-    this.http.put(`api/map/admin/product/${product.id}/`, product).subscribe(res => console.log(res));
+    this.http.patch(`api/map/admin/product/${product.id}/`, product).subscribe(res => console.log(res));
   }
 
   createProduct(product: Product): void {
