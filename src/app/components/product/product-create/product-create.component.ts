@@ -20,7 +20,7 @@ export class ProductCreateComponent implements OnInit {
 
   onSubmit(product: Product): void {
     this.productService.createProduct(product);
-    this.router.navigate(['/partnermenu']);
+    this.router.navigate(['/partner/menu']);
   }
 
 }
